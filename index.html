@@ -1,0 +1,1222 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Guía semanal de SEO para las notas de Carlos Rodríguez Salcedo en Mercados de Bloomberg Línea: cómo titular, qué subir y qué bajar, el impacto de las propuestas de SEO y los datos detrás. Se actualiza cada lunes.">
+<title>Qué rinde en Mercados · Carlos Rodríguez</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+  /* Identidad Bloomberg Línea: negro, blanco y el verde de «Línea» (#36BF58); titulares en grotesca tipo Neue Haas, texto en Lora */
+  :root {
+    color-scheme: light;
+    --bg: #FFFFFF;
+    --surface: #FFFFFF;
+    --ink: #191919;
+    --ink-2: #3D3D3D;
+    --muted: #6B6B6B;
+    --rule: #DADADA;
+    --rule-strong: #BDBDBD;
+    --neutral-bg: #F4F4F4;
+    --accent: #36BF58;
+    --accent-ink: #15803D;
+    --accent-track: #E3F4E7;
+    --notes-bar: #191919;
+    --c-prop: #36BF58;
+    --c-rev: #0F6B34;
+    --c-rest: #D0D0D0;
+    --good: #15803D;
+    --good-bg: #E8F6EC;
+    --warn: #A15300;
+    --warn-bg: #FFF1E0;
+    --bad: #C0341F;
+    --bad-bg: #FDECE8;
+    --bar-bg: #000000;
+    --bar-ink: #FFFFFF;
+    --bar-muted: #BDBDBD;
+    --bar-accent: #36BF58;
+    --bar-rule: #2A2A2A;
+    --sans: "Neue Haas Grotesk Display Pro", "neue-haas-grotesk-display", "Helvetica Neue", "Inter Tight", Helvetica, Arial, sans-serif;
+    --serif: "Lora", Georgia, "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #0A0A0A;
+      --surface: #141414;
+      --ink: #F2F2F2;
+      --ink-2: #CFCFCF;
+      --muted: #9A9A9A;
+      --rule: #2A2A2A;
+      --rule-strong: #4A4A4A;
+      --neutral-bg: #1C1C1C;
+      --accent: #30AF50;
+      --accent-ink: #4CD472;
+      --accent-track: #13261A;
+      --notes-bar: #CFCFCF;
+      --c-prop: #30AF50;
+      --c-rev: #14773A;
+      --c-rest: #3A3A3A;
+      --good: #4CD472;
+      --good-bg: #0F2A18;
+      --warn: #FFB060;
+      --warn-bg: #2E2110;
+      --bad: #FF7A66;
+      --bad-bg: #2E1512;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0A0A0A;
+    --surface: #141414;
+    --ink: #F2F2F2;
+    --ink-2: #CFCFCF;
+    --muted: #9A9A9A;
+    --rule: #2A2A2A;
+    --rule-strong: #4A4A4A;
+    --neutral-bg: #1C1C1C;
+    --accent: #30AF50;
+    --accent-ink: #4CD472;
+    --accent-track: #13261A;
+    --notes-bar: #CFCFCF;
+    --c-prop: #30AF50;
+    --c-rev: #14773A;
+    --c-rest: #3A3A3A;
+    --good: #4CD472;
+    --good-bg: #0F2A18;
+    --warn: #FFB060;
+    --warn-bg: #2E2110;
+    --bad: #FF7A66;
+    --bad-bg: #2E1512;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-inline: clamp(16px, 4vw, 44px);
+    padding-block: clamp(28px, 5vw, 56px) 72px;
+  }
+  a { color: var(--accent-ink); text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  p { margin: 0; max-width: 68ch; }
+  strong { font-weight: 600; color: var(--ink); }
+
+  /* Masthead */
+  .mast {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: clamp(24px, 5vw, 64px);
+    align-items: end;
+  }
+  .kicker {
+    font: 600 12px/1.2 var(--sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-family: var(--sans);
+    font-weight: 780;
+    font-size: clamp(44px, 7vw, 76px);
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
+    text-wrap: balance;
+  }
+  .lede {
+    font-size: clamp(18px, 2vw, 20.5px);
+    line-height: 1.5;
+    color: var(--ink-2);
+    max-width: 46ch;
+  }
+  .spec {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-top: 2px solid var(--ink);
+  }
+  .spec > div { padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  .spec > div:nth-child(odd) { padding-right: 18px; }
+  .spec dt {
+    font: 600 11px/1.3 var(--sans);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .spec dd { margin: 5px 0 0; font: 650 21px/1.15 var(--sans); color: var(--ink); }
+  .spec dd small { display: block; margin-top: 3px; font: 400 13px/1.35 var(--sans); color: var(--muted); }
+  .bezel {
+    height: 14px;
+    margin-top: 26px;
+    background:
+      repeating-linear-gradient(90deg, var(--accent) 0 2px, transparent 2px 60px) left bottom / 100% 14px no-repeat,
+      repeating-linear-gradient(90deg, var(--rule-strong) 0 1px, transparent 1px 12px) left bottom / 100% 7px no-repeat;
+  }
+
+  /* Sections */
+  section { margin-top: clamp(48px, 7vw, 76px); }
+  .sec-head { display: grid; gap: 10px; margin-bottom: 22px; }
+  .eyebrow {
+    font: 600 11.5px/1.2 var(--sans);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h2 {
+    font-family: var(--sans);
+    font-weight: 740;
+    font-size: clamp(28px, 3.6vw, 38px);
+    line-height: 1.02;
+    margin: 0;
+    text-wrap: balance;
+    max-width: 24ch;
+  }
+  .sec-head p { color: var(--ink-2); }
+  .stack { display: grid; gap: 14px; }
+  .note { font: 400 14px/1.5 var(--sans); color: var(--muted); max-width: 90ch; margin-top: 14px; }
+
+  /* Tables */
+  .table-wrap { overflow-x: auto; border-top: 2px solid var(--ink); }
+  table { width: 100%; border-collapse: collapse; font-family: var(--sans); font-size: 14.5px; }
+  .t-topics { min-width: 900px; }
+  .t-hooks { min-width: 680px; }
+  .t-mix { min-width: 760px; }
+  .t-ever { min-width: 760px; }
+  .t-gsc { min-width: 720px; }
+  thead th {
+    font: 600 11px/1.3 var(--sans);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: left;
+    padding: 12px 14px 10px 0;
+    border-bottom: 1px solid var(--rule-strong);
+    vertical-align: bottom;
+  }
+  tbody th, tbody td {
+    padding: 13px 14px 13px 0;
+    border-bottom: 1px solid var(--rule);
+    text-align: left;
+    vertical-align: middle;
+  }
+  tbody th { font-weight: 650; color: var(--ink); }
+  tbody th .how { display: block; margin-top: 3px; font: 400 13.5px/1.4 var(--serif); color: var(--muted); max-width: 42ch; }
+  th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td.chan { color: var(--ink-2); white-space: nowrap; }
+  td.idx { color: var(--ink-2); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  td.idx b { font-weight: 650; color: var(--ink); }
+  .star { color: var(--muted); font-weight: 400; }
+  tr.ref-row th, tr.ref-row td { color: var(--muted); background: var(--neutral-bg); }
+  tr.ref-row th { padding-left: 10px; }
+  .title-cell { font-weight: 500; color: var(--ink); max-width: 46ch; }
+
+  .barline { display: grid; grid-template-columns: minmax(140px, 1fr) 54px; align-items: center; gap: 10px; }
+  .bar { position: relative; height: 12px; background: var(--accent-track); }
+  .bar .fill { position: absolute; inset: 0 auto 0 0; width: var(--w); background: var(--accent); border-radius: 0 4px 4px 0; }
+  .bar .mid { position: absolute; left: var(--mid); top: -5px; bottom: -5px; width: 1px; background: var(--ink); }
+  .barline .val { font-variant-numeric: tabular-nums; text-align: right; font-weight: 600; }
+  .pair { display: grid; gap: 5px; }
+  .pair .row { display: grid; grid-template-columns: minmax(140px, 1fr) 48px; align-items: center; gap: 10px; }
+  .pair .b { height: 9px; background: transparent; position: relative; }
+  .pair .b span { position: absolute; inset: 0 auto 0 0; width: var(--w); border-radius: 0 4px 4px 0; }
+  .pair .notes span { background: var(--notes-bar); }
+  .pair .views span { background: var(--accent); }
+  .pair .v { font-variant-numeric: tabular-nums; text-align: right; font-size: 13px; color: var(--ink-2); }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 22px; font: 500 13px/1.3 var(--sans); color: var(--ink-2); margin-bottom: 12px; }
+  .legend span { display: inline-flex; align-items: center; gap: 8px; }
+  .legend i { display: inline-block; width: 18px; height: 9px; border-radius: 0 3px 3px 0; }
+  .legend .k-notes { background: var(--notes-bar); }
+  .legend .k-views { background: var(--accent); }
+  .legend .k-mid { width: 1px; height: 14px; background: var(--ink); border-radius: 0; }
+
+  /* Verdict chips */
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    font: 650 12.5px/1 var(--sans);
+    padding: 6px 10px 6px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .chip svg { width: 9px; height: 9px; fill: currentColor; flex: none; }
+  .chip.up { color: var(--good); background: var(--good-bg); }
+  .chip.keep { color: var(--warn); background: var(--warn-bg); }
+  .chip.down { color: var(--bad); background: var(--bad-bg); }
+  .chip.flat { color: var(--ink-2); background: var(--neutral-bg); }
+
+  /* Title molds */
+  .molds { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 26px; }
+  .mold {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 18px 20px 16px;
+    display: grid;
+    gap: 12px;
+    align-content: start;
+  }
+  .mold h3 { margin: 0; font: 650 12px/1.2 var(--sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .formula { font: 620 18px/1.35 var(--sans); color: var(--ink); text-wrap: balance; }
+  .formula b { font-weight: 620; color: var(--accent-ink); }
+  .mold ul { margin: 0; padding: 12px 0 0; list-style: none; display: grid; gap: 9px; border-top: 1px solid var(--rule); }
+  .mold li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px; align-items: baseline; font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+  .mold li .v { font: 600 13px/1 var(--sans); font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap; }
+
+  /* Two-list plan */
+  .plan { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 22px; }
+  .plan > div { border-top: 2px solid var(--ink); padding-top: 12px; display: grid; gap: 10px; align-content: start; }
+  .plan h3 { margin: 0; font: 700 15px/1.2 var(--sans); display: flex; align-items: center; gap: 8px; }
+  .plan ul { margin: 0; padding-left: 18px; display: grid; gap: 8px; }
+  .plan li { font-size: 15.5px; line-height: 1.5; color: var(--ink-2); }
+  .plan li::marker { color: var(--muted); }
+
+  /* Calendar */
+  .cal { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
+  .cal li {
+    display: grid;
+    grid-template-columns: 128px minmax(0, 1fr) 210px;
+    gap: 22px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .when { font: 740 16px/1.15 var(--sans); text-transform: uppercase; letter-spacing: 0.02em; color: var(--ink); }
+  .when small { display: block; margin-top: 5px; font: 400 12.5px/1.3 var(--sans); text-transform: none; letter-spacing: 0; color: var(--muted); }
+  .what h3 { margin: 0 0 4px; font: 650 17px/1.3 var(--sans); text-wrap: balance; }
+  .what p { font-size: 15.5px; line-height: 1.5; color: var(--ink-2); }
+  .what .pitch { font-style: italic; color: var(--ink); margin-top: 6px; }
+  .bench { font: 400 13px/1.45 var(--sans); color: var(--muted); display: grid; gap: 6px; align-content: start; }
+  .bench b { font-weight: 650; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .prio { display: inline-flex; align-items: center; gap: 7px; font: 650 12.5px/1 var(--sans); color: var(--ink); }
+  .prio svg { width: 11px; height: 11px; flex: none; }
+
+  /* Stop list */
+  .stop { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; border-top: 2px solid var(--ink); }
+  .stop li { padding: 14px 0; border-bottom: 1px solid var(--rule); display: grid; gap: 4px; }
+  .stop h3 { margin: 0; font: 650 16px/1.3 var(--sans); }
+  .stop p { font-size: 15px; line-height: 1.5; color: var(--ink-2); }
+
+  footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--rule-strong); display: grid; gap: 8px; }
+  footer p { font: 400 13px/1.55 var(--sans); color: var(--muted); max-width: 100ch; }
+
+  @media (max-width: 820px) {
+    .mast { grid-template-columns: minmax(0, 1fr); }
+    .molds, .plan, .stop { grid-template-columns: minmax(0, 1fr); }
+    .cal li { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  }
+
+  /* Barra de Bloomberg Línea y tipografía de la casa */
+  .bl-bar { background: var(--bar-bg); color: var(--bar-ink); border-bottom: 1px solid var(--bar-rule); }
+  .bl-bar-in { max-width: 1100px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 44px); }
+  .bl-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; padding-block: 16px 14px; }
+  .bl-mark { font: 700 clamp(22px, 2.8vw, 30px)/1 var(--sans); letter-spacing: -0.025em; color: var(--bar-ink); white-space: nowrap; }
+  .bl-mark span { color: var(--bar-accent); }
+  .bl-tag { font: 600 11.5px/1.3 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--bar-muted); }
+  .bl-nav { display: flex; gap: 24px; overflow-x: auto; padding-block: 11px 12px; border-top: 1px solid var(--bar-rule); scrollbar-width: none; }
+  .bl-nav::-webkit-scrollbar { display: none; }
+  .bl-nav a { color: var(--bar-ink); text-decoration: none; font: 500 14px/1.2 var(--sans); white-space: nowrap; }
+  .bl-nav a:hover { color: var(--bar-accent); }
+  .bl-nav a:focus-visible { outline: 2px solid var(--bar-accent); outline-offset: 3px; border-radius: 2px; }
+  .kicker, .eyebrow { font: 700 12px/1.2 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-ink); }
+  h1 { font-family: var(--sans); font-weight: 600; font-size: clamp(34px, 5vw, 54px); line-height: 1.04; letter-spacing: -0.015em; color: var(--ink); max-width: 22ch; }
+  h2 { font-family: var(--sans); font-weight: 600; font-size: clamp(24px, 2.8vw, 32px); line-height: 1.1; letter-spacing: -0.01em; color: var(--ink); }
+  .lede { font-family: var(--sans); font-size: clamp(18px, 1.9vw, 21px); line-height: 1.45; color: var(--ink-2); }
+  .byline { margin-top: 16px; font: 400 14px/1.4 var(--sans); color: var(--muted); max-width: none; }
+  .byline b { font-weight: 700; color: var(--ink); }
+  .bezel { height: 4px; margin-top: 28px; background: linear-gradient(90deg, var(--accent) 0 88px, var(--ink) 88px 100%); }
+
+  /* Guía de la semana */
+  .plan + .plan { margin-top: 16px; }
+  .sub-h { margin: 34px 0 14px; font: 700 13px/1.2 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); }
+  .semana { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .semana article { border-top: 2px solid var(--ink); padding-top: 12px; display: grid; gap: 8px; align-content: start; }
+  .semana p { font-size: 15px; line-height: 1.5; color: var(--ink-2); }
+  .semana .lbl { font: 700 12px/1.2 var(--sans); letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-ink); }
+  .semana .pitch { font: 600 17px/1.35 var(--sans); color: var(--ink); text-wrap: balance; }
+  .semana .ev { font: 400 13px/1.45 var(--sans); color: var(--muted); }
+  .probar { margin: 0; padding-left: 18px; display: grid; gap: 8px; max-width: 80ch; }
+  .probar li { font-size: 15.5px; line-height: 1.5; color: var(--ink-2); }
+  .probar li::marker { color: var(--muted); }
+  @media (max-width: 820px) { .semana { grid-template-columns: minmax(0, 1fr); } }
+
+  /* Impacto de las propuestas (acotado a .imp) */
+  .imp .tiles { margin: 30px 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid var(--ink); }
+  .imp .tiles > div { padding: 14px 18px 14px 0; border-bottom: 1px solid var(--rule); }
+  .imp .tiles dt { font: 600 11px/1.3 var(--sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .imp .tiles dd { margin: 6px 0 0; font: 700 30px/1.05 var(--sans); font-variant-numeric: tabular-nums; color: var(--ink); }
+  .imp .tiles dd small { display: block; margin-top: 5px; font: 400 13px/1.4 var(--sans); color: var(--muted); }
+  /* Chart */
+  .imp .legend { display: flex; flex-wrap: wrap; gap: 8px 22px; font: 500 13px/1.3 var(--sans); color: var(--ink-2); margin-bottom: 12px; }
+  .imp .legend span { display: inline-flex; align-items: center; gap: 8px; }
+  .imp .legend i { display: inline-block; width: 14px; height: 14px; border-radius: 3px; }
+  .imp .legend .k-prop { background: var(--c-prop); }
+  .imp .legend .k-rev { background: var(--c-rev); }
+  .imp .legend .k-rest { background: var(--c-rest); }
+  .imp .legend .k-ma { width: 18px; height: 2px; background: var(--ink); border-radius: 0; }
+  .imp .chart-card { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 10px 8px; position: relative; }
+  .imp #chart { position: relative; width: 100%; min-height: 300px; touch-action: pan-y; }
+  .imp #chart svg { display: block; overflow: visible; }
+  .imp #chart .tick { font: 500 11.5px var(--sans); fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .imp #chart .evnum { font: 700 11px var(--sans); fill: var(--ink); }
+  .imp #chart .anno { font: 500 11.5px var(--sans); fill: var(--muted); }
+  .imp .tip { position: absolute; top: 0; left: 0; pointer-events: none; background: var(--surface); border: 1px solid var(--rule-strong); border-radius: 6px; padding: 9px 11px; font: 400 12.5px/1.45 var(--sans); color: var(--ink-2); box-shadow: 0 6px 18px rgba(0,0,0,.12); min-width: 190px; }
+  .imp .tip[hidden] { display: none; }
+  .imp .tip b { color: var(--ink); font-weight: 650; }
+  .imp .tip .row { display: grid; grid-template-columns: 12px 1fr auto; gap: 8px; align-items: center; font-variant-numeric: tabular-nums; }
+  .imp .tip .row i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  .imp .tip .tot { border-top: 1px solid var(--rule); margin-top: 5px; padding-top: 5px; }
+  .imp .events { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 10px 26px; }
+  .imp .events li { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 10px; align-items: start; font: 400 14px/1.45 var(--sans); color: var(--ink-2); }
+  .imp .events .num { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid var(--ink); font: 700 11.5px var(--sans); color: var(--ink); background: var(--surface); }
+  .imp .events b { color: var(--ink); font-weight: 650; }
+
+  /* Tables */
+  .imp .table-wrap { overflow-x: auto; border-top: 2px solid var(--ink); }
+  .imp table { width: 100%; border-collapse: collapse; font-family: var(--sans); font-size: 14.5px; }
+  .imp thead th { font: 600 11px/1.3 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 12px 14px 10px 0; border-bottom: 1px solid var(--rule-strong); vertical-align: bottom; }
+  .imp tbody th, .imp tbody td { padding: 13px 14px 13px 0; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+  .imp th.num, .imp td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .imp tbody th { font-weight: 650; color: var(--ink); }
+  .imp tr.muted th, .imp tr.muted td { color: var(--muted); background: var(--neutral-bg); }
+  .imp tr.muted th { padding-left: 10px; }
+  .imp .t-ab { min-width: 560px; }
+  .imp .t-ab thead th.num { white-space: normal; }
+  .imp .t-ab tbody th { white-space: nowrap; }
+  .imp .t-ab tbody th .sub { display: block; margin-top: 3px; font-weight: 400; font-size: 12.5px; }
+  .imp .t-prop { min-width: 900px; }
+  .imp .t-prop td.when { font: 650 14px/1.2 var(--sans); white-space: nowrap; color: var(--ink); }
+  .imp .t-prop td.when small { display: block; margin-top: 4px; font-weight: 400; font-size: 12.5px; color: var(--muted); }
+  .imp .tipo { display: inline-flex; align-items: center; gap: 7px; font: 650 12px/1 var(--sans); color: var(--ink); }
+  .imp .tipo i { width: 11px; height: 11px; border-radius: 2px; display: inline-block; }
+  .imp .tipo.k-e i { background: var(--c-prop); }
+  .imp .tipo.k-r i { background: var(--c-rev); }
+  .imp .tipo.k-a i { background: transparent; border: 2px solid var(--c-rev); }
+  .imp .que { margin-top: 6px; font: 400 14px/1.45 var(--serif); color: var(--ink-2); max-width: 36ch; }
+  .imp .nota { font: 500 14.5px/1.4 var(--sans); color: var(--ink); max-width: 44ch; }
+  .imp .meta { display: block; margin-top: 4px; font: 400 12.5px/1.3 var(--sans); color: var(--muted); }
+  .imp td.res { white-space: nowrap; }
+  .imp td.res .big { display: block; font: 700 18px/1.1 var(--sans); font-variant-numeric: tabular-nums; color: var(--ink); }
+  .imp td.res small { font: 400 12.5px/1.3 var(--sans); color: var(--muted); }
+  .imp .rel { display: inline-flex; align-items: center; font: 650 12.5px/1 var(--sans); padding: 6px 10px; border-radius: 999px; white-space: nowrap; }
+  .imp .rel.hi { color: var(--good); background: var(--good-bg); }
+  .imp .rel.up { color: var(--good); background: transparent; border: 1.5px solid var(--good); }
+  .imp .rel.eq { color: var(--ink-2); background: var(--neutral-bg); }
+  .imp .rel.lo { color: var(--bad); background: var(--bad-bg); }
+  .imp .rel.na { color: var(--muted); background: transparent; border: 1px dashed var(--rule-strong); }
+
+  .imp .compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .imp .compare > div { border-top: 2px solid var(--ink); padding-top: 12px; display: grid; gap: 8px; align-content: start; }
+  .imp .compare h3 { margin: 0; font: 650 12px/1.2 var(--sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .imp .vs { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; font-family: var(--sans); }
+  .imp .vs .a { font: 700 34px/1 var(--sans); color: var(--accent-ink); font-variant-numeric: tabular-nums; }
+  .imp .vs .b { font: 700 34px/1 var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; }
+  .imp .vs span { font: 400 13.5px/1.35 var(--sans); color: var(--muted); }
+  .imp .compare p { font-size: 15.5px; color: var(--ink-2); }
+  .imp blockquote { margin: 26px 0 0; padding: 4px 0 4px 18px; border-left: 3px solid var(--accent); max-width: 60ch; }
+  .imp blockquote p { font: italic 400 20px/1.45 var(--serif); color: var(--ink); }
+  .imp blockquote footer { margin-top: 6px; font: 400 13px/1.4 var(--sans); color: var(--muted); }
+
+  .imp .caveats { margin: 0; padding-left: 18px; display: grid; gap: 10px; max-width: 80ch; }
+  .imp .caveats li { font-size: 15.5px; line-height: 1.55; color: var(--ink-2); }
+  .imp .caveats li::marker { color: var(--muted); }
+
+
+  @media (max-width: 820px) {
+    .imp .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .imp .compare { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .imp .t-prop, .imp .t-prop tbody { display: block; min-width: 0; }
+    .imp .t-prop thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .imp .t-prop tbody tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+    .imp .t-prop tbody td { display: block; padding: 0; border: 0; }
+    .imp .t-prop td.when { grid-column: 1 / -1; display: flex; gap: 8px; align-items: baseline; }
+    .imp .t-prop td.when small { display: inline; margin: 0; }
+    .imp .t-prop td:nth-child(2), .imp .t-prop td:nth-child(3) { grid-column: 1 / -1; }
+    .imp .t-prop .que, .imp .t-prop .nota { max-width: none; }
+  }
+  .imp .tiles { margin: 4px 0 30px; }
+  .imp tbody th, .imp tbody td { vertical-align: top; }
+  .imp .t-prop td.when, .imp .t-prop td.when small { text-transform: none; letter-spacing: 0; }
+  .imp blockquote footer { border: 0; padding: 0; display: block; }
+  .imp .legend .k-ref { width: 1px; height: 16px; background: var(--ink); border-radius: 0; }
+  .imp .nb { margin: 0 0 30px; }
+  .imp .nb-list { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
+  .imp .nb-row { display: grid; grid-template-columns: minmax(0, 17em) minmax(0, 1fr) 9.5em; gap: 6px 16px; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--rule); }
+  .imp .nb-lab { font: 600 14px/1.3 var(--sans); color: var(--ink); }
+  .imp .nb-lab small { display: block; margin-top: 2px; font: 400 12.5px/1.3 var(--sans); color: var(--muted); }
+  .imp .nb .bar { height: 16px; }
+  .imp .nb .bar .fill.k-e { background: var(--c-prop); }
+  .imp .nb .bar .fill.k-r { background: var(--c-rev); }
+  .imp .nb-val { font: 700 15px/1.1 var(--sans); font-variant-numeric: tabular-nums; color: var(--ink); text-align: right; white-space: nowrap; }
+  .imp .nb-val small { display: block; margin-top: 2px; font: 400 12px/1.3 var(--sans); color: var(--muted); }
+  .imp .nb figcaption { margin-top: 10px; }
+  .imp .t-sem { min-width: 560px; }
+  .imp .t-sem thead th.num { white-space: normal; }
+  .imp .t-sem tbody th { white-space: nowrap; }
+  .imp .t-sem tr.top th, .imp .t-sem tr.top td { font-weight: 650; color: var(--ink); background: var(--accent-track); }
+  .parte { margin: clamp(52px, 7vw, 80px) 0 0; padding-top: 12px; border-top: 4px solid var(--ink); display: flex; align-items: center; gap: 10px; font: 700 13px/1.2 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); max-width: none; }
+  .parte span { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: var(--bar-bg); font-size: 12.5px; letter-spacing: 0; }
+  .parte + section, .parte + .imp > section:first-child { margin-top: 28px; }
+  @media (max-width: 640px) {
+    .imp .nb-row { grid-template-columns: minmax(0, 1fr) auto; }
+    .imp .nb-lab { grid-column: 1 / -1; }
+  }
+</style>
+</head>
+<body>
+<div class="bl-bar">
+  <div class="bl-bar-in">
+    <div class="bl-top">
+      <span class="bl-mark">Bloomberg <span>Línea</span></span>
+      <span class="bl-tag">Uso interno · SEO</span>
+    </div>
+    <nav class="bl-nav" aria-label="Secciones">
+      <a href="#s-guia">Guía</a>
+      <a href="#s-impacto">Impacto</a>
+      <a href="#s-tipica">Nota por nota</a>
+      <a href="#s-prop">Propuestas</a>
+      <a href="#s-foto">La foto</a>
+      <a href="#s-temas">Temas</a>
+      <a href="#s-titulares">Titulares</a>
+      <a href="#s-mes">Reparto</a>
+      <a href="#s-cal">Calendario</a>
+      <a href="#s-ever">Búsquedas</a>
+      <a href="#s-stop">Recortes</a>
+    </nav>
+  </div>
+</div>
+
+<div class="page">
+  <header>
+    <div class="mast">
+      <div>
+        <p class="kicker">Mercados · Guía semanal de SEO</p>
+        <h1>Qué rinde en las notas de Carlos Rodríguez</h1>
+        <p class="lede">Carlos publica unas 25 notas por semana y la típica llega a 564 vistas en sus primeros 7 días. Rinden más cuando el titular trae el dólar, un país de la región o una lista de claves, y menos cuando solo cuentan lo que dice un banco. Primero va la guía de la semana; después, el impacto de las propuestas de SEO y los datos que la sostienen.</p>
+        <p class="byline">Por <b>SEO</b> · actualizado el 21 de septiembre de 2026</p>
+      </div>
+      <dl class="spec">
+        <div><dt>Periodo</dt><dd>8 semanas<small>notas publicadas del 20 jul al 13 sep 2026</small></dd></div>
+        <div><dt>Notas de Carlos</dt><dd>201<small>unas 25 por semana</small></dd></div>
+        <div><dt>Mediana por nota</dt><dd>564 vistas<small>en sus primeros 7 días</small></dd></div>
+        <div><dt>Superan 1.000 vistas</dt><dd>22%<small>en su primera semana</small></dd></div>
+        <div><dt>Llegan por Discover</dt><dd>77%<small>de sus clics desde Google</small></dd></div>
+        <div><dt>Notas con SEO</dt><dd>2<small>desde el 8 de septiembre</small></dd></div>
+      </dl>
+    </div>
+    <div class="bezel" aria-hidden="true"></div>
+  </header>
+
+  <p class="parte"><span>1</span>La guía de la semana</p>
+  <section aria-labelledby="s-guia">
+    <div class="sec-head">
+      <p class="eyebrow">Hoja de ruta · semana del 21 al 27 de septiembre</p>
+      <h2 id="s-guia">Lo que aplicamos desde ya</h2>
+      <p>Lo que funciona y lo que no en las notas de Carlos, con los acuerdos de la reunión del 21 de septiembre. Se actualiza cada lunes por la tarde con los datos de la semana: lo que deja de rendir sale de aquí.</p>
+    </div>
+    <div class="plan">
+      <div>
+        <h3><span class="chip up"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 9h10L5 1z"/></svg>Titula así</span></h3>
+        <ul>
+          <li><b>El hallazgo primero y el banco al final</b>: «Los países de América Latina que estarán entre los más golpeados por El Niño, según BofA» (2.709). Con el banco o la firma en el titular, la mediana es de 390; sin él, de 600.</li>
+          <li><b>Claves o una lista con número</b>: «cinco claves», «las 5 acciones más rentables». Mediana de 904 y 41% pasa de 1.000 vistas (todas sus notas: 22%).</li>
+          <li><b>El dólar o un país de la región en el titular</b>: con el dólar, mediana de 703; con América Latina o un país, 655.</li>
+          <li><b>La pregunta del inversionista</b>: «¿Invertir en Colombia o Perú? JPMorgan tiene razones para preferir a uno de los dos» (1.141). Con pregunta, mediana de 663.</li>
+          <li><b>H2 en pregunta y una tabla</b> cuando la nota compara precios objetivo o cifras: ayudan en búsqueda (ver la parte 2).</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="chip flat"><svg viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="4"/></svg>Antes de publicar</span></h3>
+        <ul>
+          <li>La pregunta de Angela: <b>«¿Qué pasa si no saco esta nota?»</b>. Si la respuesta es «nada», a la siguiente, sobre todo con la cuarta visión de un banco sobre el mismo tema.</li>
+          <li>Pásale el titular a SEO antes de publicar, como con los Mercurys: vuelve con las palabras clave y los H2.</li>
+          <li>Si el tema ya tiene varias notas en el día (Apple durante el Apple Event), busca el ángulo que falta o junta todo en una.</li>
+          <li>Las notas que salen sí o sí (cierres, agenda del día) salen igual, pero con el dato que mueve al lector en el titular: el dólar, el oro o los bonos.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="plan">
+      <div>
+        <h3><span class="chip up"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 9h10L5 1z"/></svg>Sube</span></h3>
+        <ul>
+          <li><b>Las monedas de la región</b>, con el ganador en el titular: la serie de monedas de cada mes o trimestre tuvo una mediana de 7.602 vistas en su primera semana (13,5 veces su nota típica) y la de abril llegó a 38.674.</li>
+          <li><b>Rankings y listas</b>: 7 notas con mediana de 1.344. Son el 3,5% de lo que publica y el 8,1% de lo que se lee.</li>
+          <li><b>Nubank y los grandes inversionistas</b>: las 4 notas de Nu tuvieron una mediana de 2.371; las de Buffett, Berkshire y Ackman, 1.107.</li>
+          <li><b>Oro</b>: mediana de 911 en 11 notas; el alza con la visión de UBS hizo 3.384.</li>
+          <li><b>Explicadores de la agenda</b>: «¿Qué es Jackson Hole y por qué es importante?» hizo 1.865 vistas y 694 clics de búsqueda.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="chip down"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 1h10L5 9z"/></svg>Baja</span></h3>
+        <ul>
+          <li><b>La visión de un banco sin pregunta ni país</b>: 44 notas, el 22% de lo que publica, con mediana de 339. El 43% no llegó a 300 vistas.</li>
+          <li><b>Una nota por banco sobre el mismo tema</b>: 13 notas sobre la cuenta fiscal del sismo en Colombia, con mediana de 317. Las que juntaron el tema sí rindieron: el déficit (1.509) y «Lo que viene después del T.I.G.R.E.» (1.266).</li>
+          <li><b>Apple en cada movimiento</b>: 10 notas con mediana de 374; 6 salieron entre el 8 y el 10 de septiembre.</li>
+          <li><b>Materias primas de nicho y empresas lejanas a la región</b>: el azúcar ante El Niño (126), la caja de las petroleras (107) o Live Nation (52).</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub-h">Tres temas para preparar esta semana</h3>
+    <div class="semana">
+      <article>
+        <p class="lbl">Cierre de trimestre · 30 sep</p>
+        <p class="pitch">[Moneda] lidera: las monedas más fuertes de América Latina en el tercer trimestre de 2026</p>
+        <p>Poner en el titular la moneda que gane y el dato que la hace noticia, como en julio. La de agosto, sin ganador en el titular, se quedó en 685.</p>
+        <p class="ev">Serie de monedas: mediana de 7.602 en la primera semana. Tercer trimestre de 2025: 2.325</p>
+      </article>
+      <article>
+        <p class="lbl">Elecciones en Brasil · 4 oct</p>
+        <p class="pitch">Elecciones en Brasil: qué puede pasar con el real, el Ibovespa y las acciones si gana Lula o Flávio Bolsonaro</p>
+        <p>Una sola nota de servicio con las apuestas de los bancos, antes de la primera vuelta. Si hay segunda vuelta, el 25 de octubre.</p>
+        <p class="ev">«Las 10 acciones que prefiere Citi si gana Lula o Bolsonaro»: 793 vistas en 5 días</p>
+      </article>
+      <article>
+        <p class="lbl">Cierre de trimestre · 30 sep</p>
+        <p class="pitch">Las acciones más rentables del S&amp;P 500 en el tercer trimestre de 2026</p>
+        <p>Ranking con la cifra y el motor de cada alza, enlazado desde el cierre de Wall Street de ese día.</p>
+        <p class="ev">«Las 5 acciones más rentables del S&amp;P 500 en 2026»: 2.786 vistas. «s&amp;p 500»: 55.253 impresiones en cuatro semanas</p>
+      </article>
+    </div>
+
+    <h3 class="sub-h">A probar en las próximas semanas</h3>
+    <ul class="probar">
+      <li>Publicar antes de las 8:00 (hora de Bogotá) la nota del día con más potencial en Discover: las publicadas antes de esa hora tuvieron mediana de 843 (33 notas); las del mediodía en adelante, 375.</li>
+      <li>En los cierres de Wall Street, el activo que se movió en el titular (dólar, oro, bonos, empleo): mediana de 583 frente a 501.</li>
+      <li>Una guía de servicio sobre el S&amp;P 500 (qué es, cómo se invierte desde América Latina y cuánto rinde en 2026) para la búsqueda que hoy no convierte.</li>
+      <li>Tablas con el precio objetivo en las notas de empresas, midiendo sus clics de búsqueda semana a semana.</li>
+    </ul>
+    <p class="note">Cambios en la guía · 21 de septiembre: primera versión, con los acuerdos de la reunión del 21 de septiembre con Angela, Andrés e Isaac.</p>
+  </section>
+  <!-- fin-guia -->
+
+  <p class="parte"><span>2</span>El impacto de las propuestas</p>
+  <div class="imp">
+  <section aria-labelledby="s-impacto">
+    <div class="sec-head">
+      <p class="eyebrow">Línea de tiempo</p>
+      <h2 id="s-impacto">Dos notas con SEO en dos meses de notas de Carlos</h2>
+      <p>SEO empezó a revisar notas de Carlos el 8 de septiembre, en #the-morning-call y #cendesk-general. Desde entonces, las dos notas con su intervención sumaron 752 vistas, el 1,8% de lo que se leyó de Carlos en esos días.</p>
+      <p>Sus notas promediaron 3.443 vistas diarias entre el 20 de julio y el 20 de septiembre. La semana más alta fue la del 27 de julio al 2 de agosto, con 6.252 vistas por día, por la nota de las monedas de julio.</p>
+    </div>
+    <dl class="tiles">
+      <div><dt>Vistas diarias de sus notas</dt><dd>3.443<small>promedio del 20 jul al 20 sep</small></dd></div>
+      <div><dt>Notas con SEO</dt><dd>2<small>8 y 10 de septiembre</small></dd></div>
+      <div><dt>Clics de búsqueda, notas con SEO</dt><dd>92 y 78<small>la nota típica de esos días: 53</small></dd></div>
+      <div><dt>Primera semana, notas con SEO</dt><dd>510 y 231<small>vistas; la típica de esos días: 408</small></dd></div>
+    </dl>
+    <div class="legend">
+      <span><i class="k-rev"></i>Nota revisada por SEO</span>
+      <span><i class="k-rest"></i>Resto de sus notas</span>
+      <span><i class="k-ma"></i>Promedio de 7 días</span>
+    </div>
+    <div class="chart-card">
+      <div id="chart" role="img" aria-label="Vistas diarias de las notas de Carlos Rodríguez Salcedo, del 20 de julio al 20 de septiembre de 2026, con las notas revisadas por SEO."></div>
+      <div class="tip" id="tip" hidden></div>
+    </div>
+    <ol class="events">
+      <li><span class="num">1</span><span><b>8 sep.</b> SEO propone las palabras clave de la nota del precio del nuevo iPhone.</span></li>
+      <li><span class="num">2</span><span><b>10 sep.</b> Carlos pide revisar su nota sobre la acción de Apple; SEO le deja cuatro recomendaciones.</span></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="s-ab">
+    <div class="sec-head">
+      <p class="eyebrow">Semana a semana</p>
+      <h2 id="s-ab">La línea base para medir lo que viene</h2>
+      <p>Con dos intervenciones todavía no hay un antes y un después que medir. Esta tabla deja la línea base: las vistas diarias de todas las notas de Carlos, semana a semana, y la mediana de la primera semana de las que publicó en cada una.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="t-sem" aria-label="Vistas diarias de las notas de Carlos por semana">
+        <thead><tr><th scope="col">Semana</th><th scope="col" class="num">Vistas por día</th><th scope="col" class="num">Notas publicadas</th><th scope="col" class="num">Mediana en 7 días</th><th scope="col" class="num">Parte con SEO</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">20 jul – 26 jul</th><td class="num">2.768</td><td class="num">22</td><td class="num">700</td><td class="num">—</td></tr>
+          <tr class="top"><th scope="row">27 jul – 2 ago</th><td class="num">6.252</td><td class="num">26</td><td class="num">658</td><td class="num">—</td></tr>
+          <tr><th scope="row">3 ago – 9 ago</th><td class="num">2.711</td><td class="num">22</td><td class="num">434</td><td class="num">—</td></tr>
+          <tr><th scope="row">10 ago – 16 ago</th><td class="num">3.528</td><td class="num">29</td><td class="num">586</td><td class="num">—</td></tr>
+          <tr><th scope="row">17 ago – 23 ago</th><td class="num">3.448</td><td class="num">21</td><td class="num">589</td><td class="num">—</td></tr>
+          <tr><th scope="row">24 ago – 30 ago</th><td class="num">2.840</td><td class="num">27</td><td class="num">526</td><td class="num">—</td></tr>
+          <tr><th scope="row">31 ago – 6 sep</th><td class="num">2.936</td><td class="num">25</td><td class="num">651</td><td class="num">—</td></tr>
+          <tr><th scope="row">7 sep – 13 sep</th><td class="num">2.876</td><td class="num">29</td><td class="num">409</td><td class="num">3,6%</td></tr>
+          <tr><th scope="row">14 sep – 20 sep</th><td class="num">3.623</td><td class="num">26</td><td class="num">—</td><td class="num">0,1%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Vistas de GA4 de todas las notas que firma Carlos, incluidas las de meses anteriores que siguen recibiendo lectores. La mediana solo se da cuando todas las notas de la semana ya cumplieron 7 días.</p>
+  </section>
+
+  <section aria-labelledby="s-tipica">
+    <div class="sec-head">
+      <p class="eyebrow">Frente a la nota típica</p>
+      <h2 id="s-tipica">Las notas con SEO ganaron búsqueda</h2>
+      <p>Cada barra es una nota de Carlos en la que intervino SEO. La línea vertical marca la nota típica: la mediana de las otras 21 notas que publicó del 8 al 13 de septiembre.</p>
+    </div>
+    <div class="legend">
+      <span><i class="k-rev"></i>Titular o nota revisados por SEO</span>
+      <span><i class="k-ref"></i>Nota típica de esos días: 408 vistas</span>
+    </div>
+    <figure class="nb" aria-label="Vistas en la primera semana de cada nota de Carlos con intervención de SEO, frente a la nota típica">
+      <ol class="nb-list">
+        <li class="nb-row" title="¿Cuánto costará el nuevo iPhone? Esto anticipan JPMorgan, Bank of America y Citi para el Apple Event: 510 vistas en 7 días y 92 clics de búsqueda"><span class="nb-lab">¿Cuánto costará el nuevo iPhone?<small>Titular o nota · 8 sep</small></span><span class="bar" style="--w:51.0%;--mid:40.8%"><span class="fill k-r"></span><span class="mid"></span></span><span class="nb-val">510<small>1,3 veces · búsqueda 1,7 veces</small></span></li>
+        <li class="nb-row" title="Acción de Apple rebota en bolsa: ¿es hora de invertir? Este es el precio objetivo de Wall Street: 231 vistas en 7 días y 78 clics de búsqueda"><span class="nb-lab">Acción de Apple rebota en bolsa<small>Titular o nota · 10 sep</small></span><span class="bar" style="--w:23.1%;--mid:40.8%"><span class="fill k-r"></span><span class="mid"></span></span><span class="nb-val">231<small>0,6 veces · búsqueda 1,5 veces</small></span></li>
+      </ol>
+      <figcaption class="note">Vistas de GA4 en los primeros 7 días de cada nota. Debajo, cuántas veces rindió la nota típica en vistas y en clics de búsqueda de Search Console (53 en la típica).</figcaption>
+    </figure>
+    <div class="compare">
+      <div>
+        <h3>Clics de búsqueda</h3>
+        <p class="vs"><b class="a">92 y 78</b><span>las dos notas con SEO</span><b class="b">53</b><span>la nota típica del 8 al 13 de septiembre</span></p>
+        <p>Las recomendaciones de SEO (palabras clave, H2 en pregunta, tabla con precios objetivo) apuntan a búsqueda, y ahí las dos notas superaron a la típica.</p>
+      </div>
+      <div>
+        <h3>Vistas en la primera semana</h3>
+        <p class="vs"><b class="a">510 y 231</b><span>las dos notas con SEO</span><b class="b">408</b><span>la nota típica de esos días</span></p>
+        <p>En vistas, una quedó arriba y otra abajo. Las dos eran de Apple en la semana del Apple Event y casi no tuvieron tráfico de Discover (1 y 4 clics), que es por donde llega el 77% de los clics de Google de Carlos.</p>
+      </div>
+    </div>
+    <blockquote>
+      <p>«[…] buenas las recomendaciones».</p>
+      <footer>Carlos Rodríguez Salcedo, en #cendesk-general, 10 de septiembre de 2026</footer>
+    </blockquote>
+  </section>
+
+  <section aria-labelledby="s-prop">
+    <div class="sec-head">
+      <p class="eyebrow">Una por una</p>
+      <h2 id="s-prop">Lo que propuso y lo que salió</h2>
+      <p>Cada intervención de SEO en Slack que terminó en una nota publicada de Carlos, del 8 al 10 de septiembre. «La típica» es la mediana de la primera semana de sus otras notas publicadas en esos días (408 vistas).</p>
+    </div>
+    <div class="table-wrap">
+      <table class="t-prop" aria-label="Propuestas y revisiones de SEO y el resultado de cada nota">
+        <thead><tr><th scope="col">Fecha</th><th scope="col">Qué hizo SEO</th><th scope="col">Nota publicada</th><th scope="col">Resultado</th><th scope="col">Frente a la típica</th></tr></thead>
+        <tbody>
+          <tr><td class="when">8 sep<small>#the-morning-call</small></td><td><span class="tipo k-r"><i aria-hidden="true"></i>Titular o nota</span><p class="que">Propuso las palabras clave del titular: iPhone 18 Pro, precio, Pro Max y «cuánto costará».</p></td><td><p class="nota">¿Cuánto costará el nuevo iPhone? Esto anticipan JPMorgan, Bank of America y Citi para el Apple Event</p><small class="meta">Mercados · publicada el 8 sep. El plan del día decía «¿Cuánto valdrá el nuevo iPhone?»; salió «¿Cuánto costará el nuevo iPhone?» con el H2 «¿Cuánto costarán el iPhone 18 Pro, Pro Max y Ultra?».</small></td><td class="res"><span class="big">510</span><small>vistas en 7 días · 92 clics de búsqueda</small></td><td><span class="rel up">1,3 × la típica</span></td></tr>
+          <tr><td class="when">10 sep<small>#cendesk-general</small></td><td><span class="tipo k-r"><i aria-hidden="true"></i>Titular o nota</span><p class="que">Revisó la nota: respuesta directa bajo el H2 de inversión, precio objetivo más arriba y una tabla con BofA, Citi, Morgan Stanley y UBS.</p></td><td><p class="nota">Acción de Apple rebota en bolsa: ¿es hora de invertir? Este es el precio objetivo de Wall Street</p><small class="meta">Mercados · publicada el 10 sep. La nota publicada tiene el H2 «¿Es hora de invertir en acciones de Apple?» y una tabla.</small></td><td class="res"><span class="big">231</span><small>vistas en 7 días · 78 clics de búsqueda</small></td><td><span class="rel lo">0,6 × la típica</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-lectura">
+    <div class="sec-head">
+      <p class="eyebrow">Cómo leer estas cifras</p>
+      <h2 id="s-lectura">Qué muestran y qué no</h2>
+    </div>
+    <ul class="caveats">
+      <li>Son dos notas: no alcanzan para separar el efecto de SEO del tema. Las dos eran de Apple en la semana del Apple Event, cuando Carlos publicó 6 notas de Apple en tres días.</li>
+      <li>Muestran coincidencia en el tiempo, no causa. La comparación justa es contra la nota típica de esos mismos días, no contra cero.</li>
+      <li>Los cambios que propuso SEO apuntan a búsqueda; el grueso del tráfico de Carlos llega por Discover, que depende sobre todo del titular y del tema. Por eso la guía de arriba se centra en los titulares.</li>
+      <li>Solo cuentan las intervenciones de SEO visibles en Slack: el DM con Carlos está vacío y las dos salieron de #the-morning-call y #cendesk-general. Las sugerencias de Angela o de Andrés no entran.</li>
+    </ul>
+  </section>
+  </div>
+
+  <p class="parte"><span>3</span>Los datos detrás de la guía</p>
+  <section aria-labelledby="s-foto">
+    <div class="sec-head">
+      <p class="eyebrow">La foto de los dos meses</p>
+      <h2 id="s-foto">Un piso alto que vive de Discover</h2>
+    </div>
+    <div class="stack">
+      <p>Entre el 20 de julio y el 13 de septiembre Carlos publicó <strong>201 notas</strong>, unas 25 por semana. La típica se quedó en 564 vistas en su primera semana y solo el 6% quedó por debajo de 200. Las 10 más leídas hicieron el 27% de las vistas: su tráfico no depende de dos o tres notas.</p>
+      <p>Cada nota se mide por sus vistas en los primeros 7 días, para que las más recientes no salgan castigadas. Se cuentan solo las notas que firma Carlos, confirmadas en los datos estructurados de cada una; la ruta /mercados/ también la usa el sitio en portugués, que queda fuera.</p>
+      <p>El 77% de los clics que Google mandó a estas notas llegó por Discover. Las notas que viven de Discover tuvieron mediana de 870; las que viven de búsqueda, 420.</p>
+      <p>Después del corte llegó la semana de la Fed: «Reunión de la Fed: qué puede pasar con el dólar, Wall Street y las monedas de América Latina» (16 de septiembre) sumó <strong>3.548 vistas en 5 días</strong>, y el 90% de sus clics de Google llegó por Discover.</p>
+    </div>
+    <div class="plan">
+      <div>
+        <h3><span class="chip up"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 9h10L5 1z"/></svg>Le funciona</span></h3>
+        <ul>
+          <li>La serie de monedas de la región cuando el titular dice quién ganó: mediana de 7.602 en 7 entregas.</li>
+          <li>Las listas y claves con número: mediana de 904, frente a 564 de todas sus notas.</li>
+          <li>El dinero de los grandes: Nubank (2.371), Buffett, Berkshire y Ackman (1.107).</li>
+          <li>Explicar la agenda antes de que ocurra: Jackson Hole, la reunión de la Fed, el día de la Fed para invertir.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="chip down"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 1h10L5 9z"/></svg>No le funciona</span></h3>
+        <ul>
+          <li>La visión de un banco contada como noticia: 44 notas y mediana de 339.</li>
+          <li>Repetir el tema banco por banco: Colombia después del sismo, 13 notas y mediana de 317.</li>
+          <li>Las grandes tecnológicas sin ángulo para el inversionista: 34 notas y mediana de 450.</li>
+          <li>Los temas saturados: Apple, con 10 notas y mediana de 374.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-temas">
+    <div class="sec-head">
+      <p class="eyebrow">Temas</p>
+      <h2 id="s-temas">Dónde rinde cada nota</h2>
+      <p>Notas publicadas del 20 de julio al 13 de septiembre, agrupadas por el tema principal del titular. La barra compara la mediana de cada tema con la de todas sus notas (564).</p>
+    </div>
+    <div class="legend" aria-hidden="true">
+      <span><i class="k-views"></i>Mediana de vistas en la primera semana</span>
+      <span><i class="k-mid"></i>Mediana de todas sus notas (564)</span>
+    </div>
+    <div class="table-wrap">
+      <table class="t-topics" aria-label="Rendimiento por tema, notas publicadas del 20 de julio al 13 de septiembre de 2026">
+        <thead>
+          <tr>
+            <th scope="col">Tema</th>
+            <th scope="col" class="num">Notas</th>
+            <th scope="col">Mediana en la primera semana</th>
+            <th scope="col" class="num">Peso en vistas</th>
+            <th scope="col">Canal</th>
+            <th scope="col">Qué hacer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Buffett, Ackman y grandes fondos<span class="how">Qué compran y qué venden: Berkshire mueve su cartera (1.781) y las seis acciones de Bill Ackman (1.344).</span></th><td class="num">6<span class="star">*</span></td><td><div class="barline"><div class="bar" title="Buffett, Ackman y grandes fondos: mediana de 1.107 vistas en la primera semana" style="--w:100.0%;--mid:50.9%"><span class="fill"></span><span class="mid"></span></div><span class="val">1.107</span></div></td><td class="num">4%</td><td class="chan">Discover</td><td><span class="chip up"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 9h10L5 1z"/></svg>Subir</span></td></tr>
+          <tr><th scope="row">El Niño y clima<span class="how">Solo con el ranking de países de la región: Deutsche Bank (4.951) y BofA (2.709). Las apuestas de Citi en azúcar no llegaron a 300.</span></th><td class="num">5<span class="star">*</span></td><td><div class="barline"><div class="bar" title="El Niño y clima: mediana de 1.017 vistas en la primera semana" style="--w:91.9%;--mid:50.9%"><span class="fill"></span><span class="mid"></span></div><span class="val">1.017</span></div></td><td class="num">5%</td><td class="chan">Discover</td><td><span class="chip up"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 9h10L5 1z"/></svg>Con ranking</span></td></tr>
+          <tr><th scope="row">América Latina y países<span class="how">La pregunta del inversionista con un banco que responde: ¿Colombia o Perú? (1.141), la cartera de BofA en la región (1.403).</span></th><td class="num">10</td><td><div class="barline"><div class="bar" title="América Latina y países: mediana de 726 vistas en la primera semana" style="--w:65.5%;--mid:50.9%"><span class="fill"></span><span class="mid"></span></div><span class="val">726</span></div></td><td class="num">5%</td><td class="chan">Discover</td><td><span class="chip up"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 9h10L5 1z"/></svg>Subir</span></td></tr>
+          <tr><th scope="row">Nubank y empresas de la región<span class="how">Nu rinde en cada resultado (mediana de 2.371 en 4 notas); Ecopetrol no (366).</span></th><td class="num">10</td><td><div class="barline"><div class="bar" title="Nubank y empresas de la región: mediana de 724 vistas en la primera semana" style="--w:65.4%;--mid:50.9%"><span class="fill"></span><span class="mid"></span></div><span class="val">724</span></div></td><td class="num">7%</td><td class="chan">Mixto</td><td><span class="chip keep"><svg viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="4"/></svg>Nu sí</span></td></tr>
+          <tr><th scope="row">Irán, Trump y geopolítica<span class="how">La serie del TACO: la fórmula para anticipar a Trump (1.144) y su seguimiento (1.192).</span></th><td class="num">7<span class="star">*</span></td><td><div class="barline"><div class="bar" title="Irán, Trump y geopolítica: mediana de 675 vistas en la primera semana" style="--w:61.0%;--mid:50.9%"><span class="fill"></span><span class="mid"></span></div><span class="val">675</span></div></td><td class="num">3%</td><td class="chan">Search</td><td><span class="chip flat"><svg viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="4"/></svg>Con noticia</span></td></tr>
+          <tr><th scope="row">Wall Street y S&amp;P 500<span class="how">Rankings y lecciones de la historia: las 5 acciones más rentables (2.786), ¿es tarde para invertir? (1.199).</span></th><td class="num">13</td><td><div class="barline"><div class="bar" title="Wall Street y S&amp;P 500: mediana de 653 vistas en la primera semana" style="--w:59.0%;--mid:50.9%"><span class="fill"></span><span class="mid"></span></div><span class="val">653</span></div></td><td class="num">7%</td><td class="chan">Discover</td><td><span class="chip up"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 9h10L5 1z"/></svg>Subir</span></td></tr>
+          <tr><th scope="row">Fed, tasas y bonos<span class="how">Explicar la agenda antes del evento: ¿Qué es Jackson Hole? (1.865). La visión de un banco sobre bonos se queda corta (96).</span></th><td class="num">15</td><td><div class="barline"><div class="bar" title="Fed, tasas y bonos: mediana de 578 vistas en la primera semana" style="--w:52.2%;--mid:50.9%"><span class="fill"></span><span class="mid"></span></div><span class="val">578</span></div></td><td class="num">7%</td><td class="chan">Discover</td><td><span class="chip keep"><svg viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="4"/></svg>Mantener</span></td></tr>
+          <tr><th scope="row">Dólar y monedas<span class="how">El ganador en el titular: la moneda más fuerte del mundo en julio (19.256) frente a las más fuertes y débiles de agosto (685).</span></th><td class="num">21</td><td><div class="barline"><div class="bar" title="Dólar y monedas: mediana de 556 vistas en la primera semana" style="--w:50.2%;--mid:50.9%"><span class="fill"></span><span class="mid"></span></div><span class="val">556</span></div></td><td class="num">20%</td><td class="chan">Discover</td><td><span class="chip up"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 9h10L5 1z"/></svg>Con ganador</span></td></tr>
+          <tr><th scope="row">Oro, petróleo y materias primas<span class="how">El oro sí (mediana de 911 en 11 notas); el azúcar, el café o la caja de las petroleras, no.</span></th><td class="num">16</td><td><div class="barline"><div class="bar" title="Oro, petróleo y materias primas: mediana de 556 vistas en la primera semana" style="--w:50.2%;--mid:50.9%"><span class="fill"></span><span class="mid"></span></div><span class="val">556</span></div></td><td class="num">8%</td><td class="chan">Discover</td><td><span class="chip keep"><svg viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="4"/></svg>Oro sí</span></td></tr>
+          <tr><th scope="row">Cierre y apertura de Wall Street<span class="how">Es servicio diario. Rinde más cuando el titular nombra lo que movió al mercado: bonos, empleo, dólar (583 frente a 501).</span></th><td class="num">37</td><td><div class="barline"><div class="bar" title="Cierre y apertura de Wall Street: mediana de 548 vistas en la primera semana" style="--w:49.5%;--mid:50.9%"><span class="fill"></span><span class="mid"></span></div><span class="val">548</span></div></td><td class="num">14%</td><td class="chan">Discover</td><td><span class="chip flat"><svg viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="4"/></svg>Servicio</span></td></tr>
+          <tr><th scope="row">Big Tech e IA<span class="how">Con claves y consecuencias para el inversionista: Tesla y Alphabet (1.740). Apple en cada movimiento, no: 10 notas y mediana de 374.</span></th><td class="num">34</td><td><div class="barline"><div class="bar" title="Big Tech e IA: mediana de 450 vistas en la primera semana" style="--w:40.6%;--mid:50.9%"><span class="fill"></span><span class="mid"></span></div><span class="val">450</span></div></td><td class="num">12%</td><td class="chan">Mixto</td><td><span class="chip down"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 1h10L5 9z"/></svg>Bajar volumen</span></td></tr>
+          <tr><th scope="row">Otras empresas y bolsas<span class="how">Solo con una cifra que sorprenda y el ángulo de inversión: Nike cae 78% (1.794); Live Nation, no (52).</span></th><td class="num">11</td><td><div class="barline"><div class="bar" title="Otras empresas y bolsas: mediana de 324 vistas en la primera semana" style="--w:29.3%;--mid:50.9%"><span class="fill"></span><span class="mid"></span></div><span class="val">324</span></div></td><td class="num">3%</td><td class="chan">Mixto</td><td><span class="chip down"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 1h10L5 9z"/></svg>Bajar</span></td></tr>
+          <tr><th scope="row">Colombia: fiscal y sismo<span class="how">Una nota que junte a los bancos, no una por banco: el déficit (1.509) frente a Oxford Economics (139).</span></th><td class="num">13</td><td><div class="barline"><div class="bar" title="Colombia: fiscal y sismo: mediana de 317 vistas en la primera semana" style="--w:28.6%;--mid:50.9%"><span class="fill"></span><span class="mid"></span></div><span class="val">317</span></div></td><td class="num">4%</td><td class="chan">Search</td><td><span class="chip down"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 1h10L5 9z"/></svg>Bajar</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">* Menos de 8 notas: tomarlo como indicio. Temas con menos de 5 notas, fuera de la tabla: Estrategia y mercado en general (3 notas, mediana 381). «Canal» indica qué pesa más en los clics de Search Console de las notas de cada tema (búsqueda frente a Discover).</p>
+  </section>
+
+  <section aria-labelledby="s-titulares">
+    <div class="sec-head">
+      <p class="eyebrow">Titulares</p>
+      <h2 id="s-titulares">Las piezas que cambian el resultado</h2>
+      <p>Una lista o claves con número, el dólar, un país de la región y la pregunta suben la mediana. El nombre del banco, solo, no la sube: lo que vende es lo que el banco responde. Una nota puede llevar varias piezas y contar en más de una fila.</p>
+    </div>
+    <div class="legend" aria-hidden="true">
+      <span><i class="k-views"></i>Notas que superan 1.000 vistas en 7 días</span>
+      <span><i class="k-mid"></i>Promedio de todas sus notas (22%)</span>
+    </div>
+    <div class="table-wrap">
+      <table class="t-hooks" aria-label="Rendimiento según las piezas del titular">
+        <thead>
+          <tr>
+            <th scope="col">El titular lleva</th>
+            <th scope="col" class="num">Notas</th>
+            <th scope="col" class="num">Mediana</th>
+            <th scope="col">Superan 1.000 vistas</th>
+            <th scope="col" class="num">Superan 500</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class=""><th scope="row">Lista o claves con número</th><td class="num">32</td><td class="num">904</td><td><div class="barline"><div class="bar" title="Lista o claves con número: 41% supera 1.000 vistas en 7 días" style="--w:40.6%;--mid:22.4%"><span class="fill"></span><span class="mid"></span></div><span class="val">41%</span></div></td><td class="num">72%</td></tr>
+          <tr class=""><th scope="row">El dólar</th><td class="num">28</td><td class="num">703</td><td><div class="barline"><div class="bar" title="El dólar: 39% supera 1.000 vistas en 7 días" style="--w:39.3%;--mid:22.4%"><span class="fill"></span><span class="mid"></span></div><span class="val">39%</span></div></td><td class="num">71%</td></tr>
+          <tr class=""><th scope="row">América Latina o un país de la región</th><td class="num">52</td><td class="num">655</td><td><div class="barline"><div class="bar" title="América Latina o un país de la región: 35% supera 1.000 vistas en 7 días" style="--w:34.6%;--mid:22.4%"><span class="fill"></span><span class="mid"></span></div><span class="val">35%</span></div></td><td class="num">60%</td></tr>
+          <tr class=""><th scope="row">Pregunta</th><td class="num">32</td><td class="num">663</td><td><div class="barline"><div class="bar" title="Pregunta: 34% supera 1.000 vistas en 7 días" style="--w:34.4%;--mid:22.4%"><span class="fill"></span><span class="mid"></span></div><span class="val">34%</span></div></td><td class="num">69%</td></tr>
+          <tr class=""><th scope="row">El año</th><td class="num">10</td><td class="num">764</td><td><div class="barline"><div class="bar" title="El año: 40% supera 1.000 vistas en 7 días" style="--w:40.0%;--mid:22.4%"><span class="fill"></span><span class="mid"></span></div><span class="val">40%</span></div></td><td class="num">80%</td></tr>
+          <tr class=""><th scope="row">Una cifra (%, US$)</th><td class="num">64</td><td class="num">646</td><td><div class="barline"><div class="bar" title="Una cifra (%, US$): 23% supera 1.000 vistas en 7 días" style="--w:23.4%;--mid:22.4%"><span class="fill"></span><span class="mid"></span></div><span class="val">23%</span></div></td><td class="num">64%</td></tr>
+          <tr class="ref-row"><th scope="row">Todas sus notas</th><td class="num">201</td><td class="num">564</td><td><div class="barline"><div class="bar" title="Todas sus notas: 22% supera 1.000 vistas en 7 días" style="--w:22.4%;--mid:22.4%"><span class="fill"></span><span class="mid"></span></div><span class="val">22%</span></div></td><td class="num">56%</td></tr>
+          <tr class=""><th scope="row">El nombre de un banco o firma</th><td class="num">58</td><td class="num">390</td><td><div class="barline"><div class="bar" title="El nombre de un banco o firma: 19% supera 1.000 vistas en 7 días" style="--w:19.0%;--mid:22.4%"><span class="fill"></span><span class="mid"></span></div><span class="val">19%</span></div></td><td class="num">38%</td></tr>
+          <tr class=""><th scope="row">«Invertir» o «precio objetivo»</th><td class="num">44</td><td class="num">522</td><td><div class="barline"><div class="bar" title="«Invertir» o «precio objetivo»: 20% supera 1.000 vistas en 7 días" style="--w:20.5%;--mid:22.4%"><span class="fill"></span><span class="mid"></span></div><span class="val">20%</span></div></td><td class="num">50%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">El largo del titular casi no cambia el resultado: la mayoría de sus titulares tiene entre 81 y 100 caracteres (mediana de 570 entre 81 y 90, 562 entre 91 y 100); con 80 o menos, 497 (13 notas).</p>
+
+    <div class="molds">
+      <article class="mold">
+        <h3>Monedas del mes o del trimestre</h3>
+        <p class="formula"><b>[Moneda]</b> lidera: las monedas más fuertes de América Latina en <b>[mes o trimestre]</b></p>
+        <ul>
+          <li>Las monedas más fuertes de América Latina lideran entre los emergentes en 2026: el top cinco<span class="v">38.674</span></li>
+          <li>El precio del dólar se debilita en julio y América Latina tiene la moneda más fuerte del mundo<span class="v">19.256</span></li>
+        </ul>
+      </article>
+      <article class="mold">
+        <h3>Ranking de la región</h3>
+        <p class="formula">Los países de América Latina que <b>[más ganan o más pierden]</b> con <b>[evento]</b>, según <b>[banco]</b></p>
+        <ul>
+          <li>El Niño amenaza a América Latina y Deutsche Bank identifica los países más expuestos<span class="v">4.951</span></li>
+          <li>Los países de América Latina que estarán entre los más golpeados por El Niño, según BofA<span class="v">2.709</span></li>
+        </ul>
+      </article>
+      <article class="mold">
+        <h3>La pregunta del inversionista</h3>
+        <p class="formula">¿Invertir en <b>[A]</b> o en <b>[B]</b>? <b>[Banco]</b> tiene razones para preferir a uno</p>
+        <ul>
+          <li>¿Invertir en oro es rentable? Esto habría pasado con US$1.000 en 3, 5, 10 y 20 años<span class="v">1.387</span></li>
+          <li>¿Invertir en Colombia o Perú? JPMorgan tiene razones para preferir a uno de los dos<span class="v">1.141</span></li>
+        </ul>
+      </article>
+      <article class="mold">
+        <h3>Explicador de la agenda</h3>
+        <p class="formula">¿Qué es <b>[evento]</b> y por qué es importante? Las <b>[N]</b> claves</p>
+        <ul>
+          <li>¿Qué es Jackson Hole y por qué es importante? Las 5 claves del debut de Kevin Warsh en el evento<span class="v">1.865</span></li>
+          <li>Cinco respuestas sobre la histórica intervención del yen y su efecto en el dólar y América Latina<span class="v">1.021</span></li>
+        </ul>
+      </article>
+      <article class="mold">
+        <h3>Empresa con claves</h3>
+        <p class="formula"><b>[Empresa]</b> se <b>[desploma o dispara]</b>: <b>[N]</b> claves que explican la reacción de Wall Street</p>
+        <ul>
+          <li>Acciones de Tesla y Alphabet se desploman: cinco claves detrás del castigo bursátil<span class="v">1.740</span></li>
+          <li>Meta se hunde y Microsoft se dispara: cinco claves que explican la reacción de Wall Street<span class="v">962</span></li>
+        </ul>
+      </article>
+      <article class="mold">
+        <h3>Qué pasa con el dólar</h3>
+        <p class="formula">Qué pasará con el precio del dólar <b>de México a Colombia</b> tras <b>[evento]</b></p>
+        <ul>
+          <li>Qué pasará con el precio del dólar de México a Colombia tras primer discurso de Warsh en Jackson Hole<span class="v">1.792</span></li>
+          <li>Reunión de la Fed: qué puede pasar con el dólar, Wall Street y las monedas de América Latina<span class="v">3.548 · 5 días</span></li>
+        </ul>
+      </article>
+    </div>
+    <p class="note">Cifras junto a cada ejemplo: vistas de GA4 en los primeros 7 días de la nota. La de las monedas de abril es anterior al periodo y se bajó aparte; la de la reunión de la Fed, publicada después del corte, cuenta sus primeros 5 días.</p>
+  </section>
+
+  <section aria-labelledby="s-mes">
+    <div class="sec-head">
+      <p class="eyebrow">Reparto de las notas</p>
+      <h2 id="s-mes">El mismo volumen, mejor repartido</h2>
+      <p>Carlos publica unas 25 notas por semana. La visión de un banco es el 22% de lo que publica y el 14% de lo que se lee; los rankings, al revés: el 3,5% de las notas y el 8,1% de las vistas.</p>
+    </div>
+    <div class="legend" aria-hidden="true">
+      <span><i class="k-notes"></i>Peso en sus notas</span>
+      <span><i class="k-views"></i>Peso en sus vistas de la primera semana</span>
+    </div>
+    <div class="table-wrap">
+      <table class="t-mix" aria-label="Notas y vistas de Carlos por formato, 20 de julio a 13 de septiembre de 2026">
+        <thead>
+          <tr>
+            <th scope="col">Formato</th>
+            <th scope="col" class="num">Notas por semana</th>
+            <th scope="col" class="num">Mediana</th>
+            <th scope="col">Peso en notas y en vistas</th>
+            <th scope="col">Qué hacer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Explicador o guía para invertir</th><td class="num">6,4</td><td class="num">660</td><td><div class="pair" title="Explicador o guía para invertir: 25% de las notas y 24% de las vistas"><div class="row"><div class="b notes"><span style="--w:91.1%"></span></div><span class="v">25%</span></div><div class="row"><div class="b views"><span style="--w:85.9%"></span></div><span class="v">24%</span></div></div></td><td><span class="chip up"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 9h10L5 1z"/></svg>Más</span></td></tr>
+          <tr><th scope="row">Visión de un banco o firma</th><td class="num">5,5</td><td class="num">339</td><td><div class="pair" title="Visión de un banco o firma: 22% de las notas y 14% de las vistas"><div class="row"><div class="b notes"><span style="--w:78.6%"></span></div><span class="v">22%</span></div><div class="row"><div class="b views"><span style="--w:48.6%"></span></div><span class="v">14%</span></div></div></td><td><span class="chip down"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 1h10L5 9z"/></svg>Menos</span></td></tr>
+          <tr><th scope="row">Cierre o apertura del día</th><td class="num">4,6</td><td class="num">548</td><td><div class="pair" title="Cierre o apertura del día: 18% de las notas y 14% de las vistas"><div class="row"><div class="b notes"><span style="--w:66.1%"></span></div><span class="v">18%</span></div><div class="row"><div class="b views"><span style="--w:52.0%"></span></div><span class="v">14%</span></div></div></td><td><span class="chip flat"><svg viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="4"/></svg>Servicio</span></td></tr>
+          <tr><th scope="row">Noticia o análisis del día</th><td class="num">4,4</td><td class="num">600</td><td><div class="pair" title="Noticia o análisis del día: 17% de las notas y 28% de las vistas"><div class="row"><div class="b notes"><span style="--w:62.5%"></span></div><span class="v">17%</span></div><div class="row"><div class="b views"><span style="--w:100.0%"></span></div><span class="v">28%</span></div></div></td><td><span class="chip keep"><svg viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="4"/></svg>Mantener</span></td></tr>
+          <tr><th scope="row">Empresa o acción</th><td class="num">3,4</td><td class="num">532</td><td><div class="pair" title="Empresa o acción: 13% de las notas y 12% de las vistas"><div class="row"><div class="b notes"><span style="--w:48.2%"></span></div><span class="v">13%</span></div><div class="row"><div class="b views"><span style="--w:43.4%"></span></div><span class="v">12%</span></div></div></td><td><span class="chip keep"><svg viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="4"/></svg>Mantener</span></td></tr>
+          <tr><th scope="row">Ranking o lista</th><td class="num">0,9</td><td class="num">1.344</td><td><div class="pair" title="Ranking o lista: 3% de las notas y 8% de las vistas"><div class="row"><div class="b notes"><span style="--w:12.5%"></span></div><span class="v">3%</span></div><div class="row"><div class="b views"><span style="--w:29.1%"></span></div><span class="v">8%</span></div></div></td><td><span class="chip up"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 9h10L5 1z"/></svg>Más</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="plan">
+      <div>
+        <h3><span class="chip down"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 1h10L5 9z"/></svg>Menos</span>unas 3 notas por semana</h3>
+        <ul>
+          <li>La visión de un banco sin pregunta ni país (hoy, unas 5,5 por semana).</li>
+          <li>La segunda, tercera o cuarta nota del mismo tema contada banco por banco.</li>
+          <li>Apple en cada movimiento y las materias primas de nicho.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="chip up"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 9h10L5 1z"/></svg>Más</span>en los mismos espacios</h3>
+        <ul>
+          <li>Un ranking o una lista por semana: monedas, acciones, países.</li>
+          <li>La serie de monedas de cada mes y trimestre, con el ganador en el titular.</li>
+          <li>Explicadores de la agenda de la semana, publicados antes del evento.</li>
+          <li>Nubank y los grandes inversionistas cuando hay noticia: resultados, compras y ventas.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-cal">
+    <div class="sec-head">
+      <p class="eyebrow">Calendario</p>
+      <h2 id="s-cal">Hasta enero de 2027</h2>
+      <p>Fechas de la Fed, del TSE de Brasil y del cambio de horario en EE.UU., cada una con la nota equivalente de Carlos como referencia (vistas en sus primeros 7 días). La de los resultados de Nu se confirma más cerca.</p>
+    </div>
+    <ol class="cal">
+      <li>
+        <div class="when">30 sep<small>cierre del tercer trimestre</small></div>
+        <div class="what">
+          <h3>Las monedas del trimestre</h3>
+          <p class="pitch">[Moneda] lidera: las monedas más fuertes de América Latina en el tercer trimestre de 2026</p>
+          <p>Publicar el 1 de octubre temprano, con el ganador y el dato en el titular, y enlazar la nota del top cinco de abril.</p>
+        </div>
+        <div class="bench"><span class="prio"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="currentColor"/></svg>Prioridad alta</span><span>Tercer trimestre de 2025: <b>2.325</b></span><span>Primer trimestre de 2026: <b>7.602</b></span></div>
+      </li>
+      <li>
+        <div class="when">30 sep<small>cierre del tercer trimestre</small></div>
+        <div class="what">
+          <h3>Las acciones más rentables del S&amp;P 500</h3>
+          <p class="pitch">Las acciones más rentables del S&amp;P 500 en el tercer trimestre de 2026</p>
+          <p>Ranking con la cifra y la razón de cada alza.</p>
+        </div>
+        <div class="bench"><span class="prio"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="currentColor"/></svg>Prioridad alta</span><span>Primer semestre de 2026: <b>1.234</b></span><span>Las 5 más rentables, agosto: <b>2.786</b></span></div>
+      </li>
+      <li>
+        <div class="when">4 y 25 oct<small>primera y segunda vuelta en Brasil</small></div>
+        <div class="what">
+          <h3>Las elecciones de Brasil en los mercados</h3>
+          <p class="pitch">Elecciones en Brasil: qué puede pasar con el real, el Ibovespa y las acciones si gana Lula o Flávio Bolsonaro</p>
+          <p>Una nota de servicio antes de cada vuelta y la reacción del mercado al día siguiente.</p>
+        </div>
+        <div class="bench"><span class="prio"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="currentColor"/></svg>Prioridad alta</span><span>Acciones que prefiere Citi según quién gane: <b>793</b> en 5 días</span></div>
+      </li>
+      <li>
+        <div class="when">27–28 oct<small>reunión de la Fed</small></div>
+        <div class="what">
+          <h3>La previa de la Fed</h3>
+          <p class="pitch">Reunión de la Fed: qué puede pasar con el dólar, Wall Street y las monedas de América Latina</p>
+          <p>La misma fórmula de septiembre, publicada temprano el día de la decisión, y la reacción del mercado esa tarde.</p>
+        </div>
+        <div class="bench"><span class="prio"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="currentColor"/></svg>Prioridad alta</span><span>Septiembre: <b>3.548</b> vistas en 5 días</span><span>«¿Invertir el día de la reunión de la Fed?», julio: <b>725</b></span></div>
+      </li>
+      <li>
+        <div class="when">1 nov<small>EE.UU. vuelve al horario de invierno</small></div>
+        <div class="what">
+          <h3>A qué hora abre Wall Street</h3>
+          <p class="pitch">EE.UU. cambia de horario: ¿a qué hora abren Wall Street y las bolsas de México, Colombia y la región desde el 2 de noviembre?</p>
+          <p>Nota nueva enlazada desde la de marzo, que sigue recibiendo búsquedas.</p>
+        </div>
+        <div class="bench"><span class="prio"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6 1.5a4.5 4.5 0 0 1 0 9z" fill="currentColor"/></svg>Prioridad media</span><span>Versión de marzo: <b>2.051</b></span><span><b>27.337</b> impresiones de búsqueda entre julio y septiembre</span></div>
+      </li>
+      <li>
+        <div class="when">Noviembre<small>Nu aún no confirma la fecha</small></div>
+        <div class="what">
+          <h3>Resultados de Nu del tercer trimestre</h3>
+          <p class="pitch">Resultados de Nubank: qué espera Wall Street y cuánto puede subir la acción</p>
+          <p>La previa el día del reporte y la reacción de la acción al día siguiente, como en agosto.</p>
+        </div>
+        <div class="bench"><span class="prio"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="currentColor"/></svg>Prioridad alta</span><span>Previa del tercer trimestre de 2025: <b>1.863</b></span><span>Agosto de 2026: <b>2.280</b> y <b>2.694</b></span></div>
+      </li>
+      <li>
+        <div class="when">8–9 dic<small>última reunión de la Fed del año</small></div>
+        <div class="what">
+          <h3>La Fed cierra el año</h3>
+          <p class="pitch">Reunión de la Fed: qué puede pasar con el dólar, Wall Street y las monedas de América Latina en el cierre de 2026</p>
+        </div>
+        <div class="bench"><span class="prio"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="currentColor"/></svg>Prioridad alta</span><span>Septiembre: <b>3.548</b> vistas en 5 días</span></div>
+      </li>
+      <li>
+        <div class="when">23 y 30 dic<small>Navidad y Año Nuevo</small></div>
+        <div class="what">
+          <h3>¿Abren las bolsas en los feriados?</h3>
+          <p class="pitch">¿Las bolsas operan el 24 y el 25 de diciembre? Así será en América Latina y Wall Street</p>
+          <p>Actualizar las notas de 2025 con los horarios de 2026.</p>
+        </div>
+        <div class="bench"><span class="prio"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6 1.5a4.5 4.5 0 0 1 0 9z" fill="currentColor"/></svg>Prioridad media</span><span>Navidad de 2025: <b>2.780</b></span></div>
+      </li>
+      <li>
+        <div class="when">31 dic – 1 ene<small>cierre de 2026</small></div>
+        <div class="what">
+          <h3>Las monedas y las acciones del año</h3>
+          <p class="pitch">Las monedas más fuertes de América Latina en 2026 y las acciones más rentables del S&amp;P 500 en el año</p>
+          <p>Dos notas: la de monedas, con el ganador en el titular, y el ranking de acciones.</p>
+        </div>
+        <div class="bench"><span class="prio"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="currentColor"/></svg>Prioridad alta</span><span>Monedas de 2025, publicada el 1 de enero: <b>18.186</b></span><span>Sigue con <b>197</b> clics de búsqueda entre julio y septiembre</span></div>
+      </li>
+      <li>
+        <div class="when">26–27 ene 2027<small>primera reunión de la Fed de 2027</small></div>
+        <div class="what">
+          <h3>La Fed abre el año</h3>
+          <p>Previa con el dólar y las monedas de la región, como en septiembre.</p>
+        </div>
+        <div class="bench"><span class="prio"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6 1.5a4.5 4.5 0 0 1 0 9z" fill="currentColor"/></svg>Prioridad media</span><span>Fecha tentativa hasta que la confirme la reunión de diciembre</span></div>
+      </li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="s-ever">
+    <div class="sec-head">
+      <p class="eyebrow">Búsquedas</p>
+      <h2 id="s-ever">Notas viejas que siguen trabajando</h2>
+      <p>Notas de Carlos publicadas antes del 20 de julio con clics de búsqueda entre el 20 de julio y el 20 de septiembre. Actualizarlas o enlazarlas cuesta menos que escribir de cero y conserva la posición.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="t-ever" aria-label="Notas con tráfico de búsqueda sostenido">
+        <thead>
+          <tr>
+            <th scope="col">Nota</th>
+            <th scope="col">Publicada</th>
+            <th scope="col" class="num">Clics de Search</th>
+            <th scope="col" class="num">Impresiones</th>
+            <th scope="col">Qué hacer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="title-cell">Las monedas más fuertes de América Latina lideran entre los emergentes en 2026: el top cinco</td><td>abr 2026</td><td class="num">1.750</td><td class="num">58.443</td><td>Es la entrada de búsqueda de toda la serie: enlazarla desde cada nota de monedas y actualizar el top cinco con el trimestre.</td></tr>
+          <tr><td class="title-cell">Precio del dólar en Perú cayó con fuerza y el sol fue la segunda moneda que más avanzó en el mundo</td><td>jun 2026</td><td class="num">287</td><td class="num">4.426</td><td>Actualizar datos y fecha, y enlazarla desde notas nuevas del tema.</td></tr>
+          <tr><td class="title-cell">Deuda global rompe máximo histórico: los países de América Latina más endeudados, según el IIF</td><td>may 2026</td><td class="num">262</td><td class="num">13.853</td><td>Nueva versión cuando el IIF publique su siguiente monitor de deuda global, con el ranking de la región.</td></tr>
+          <tr><td class="title-cell">Las monedas más fuertes de América Latina en 2025 tras la mayor caída del dólar desde 2017</td><td>ene 2026</td><td class="num">197</td><td class="num">20.561</td><td>Es la base de la nota del 31 de diciembre (ver calendario). Sigue recibiendo búsquedas nueve meses después.</td></tr>
+          <tr><td class="title-cell">¿Qué hace Cerebras, el rival de Nvidia que acaba de marcar la salida a bolsa más grande de 2026?</td><td>may 2026</td><td class="num">186</td><td class="num">14.027</td><td>Enlazarla desde las notas de Nvidia y de salidas a bolsa de empresas de IA.</td></tr>
+          <tr><td class="title-cell">Netflix se desploma en bolsa: estas son las cinco dudas que explican el castigo de Wall Street</td><td>jul 2026</td><td class="num">169</td><td class="num">9.341</td><td>Enlazarla desde la próxima nota de resultados de Netflix.</td></tr>
+          <tr><td class="title-cell">Así puede comprar acciones de BYD, la empresa de movilidad eléctrica que superó a Tesla</td><td>mar 2025</td><td class="num">76</td><td class="num">3.420</td><td>Actualizar a 2026: precio y cómo comprar desde la región.</td></tr>
+          <tr><td class="title-cell">Moonshot sacude a Wall Street: qué es Kimi K3 y por qué revive el temor a un “momento DeepSeek”</td><td>jul 2026</td><td class="num">71</td><td class="num">5.941</td><td>Actualizar datos y fecha, y enlazarla desde notas nuevas del tema.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Aparte: «Evolución de las acciones de Santander en 2026», de julio, tuvo 46.297 impresiones en posición 4,8 y 289 clics. Es la nota suya con más impresiones y la que más pide un título nuevo.</p>
+
+    <div class="sec-head" style="margin-top: 40px;">
+      <h2 style="font-size: clamp(22px, 2.6vw, 27px); max-width: none;">Búsquedas que ya piden una nota</h2>
+      <p>Consultas con muchas impresiones y pocos clics en las páginas de /mercados/, del 24 de agosto al 20 de septiembre de 2026.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="t-gsc" aria-label="Oportunidades en Search Console">
+        <thead>
+          <tr>
+            <th scope="col">Consulta</th>
+            <th scope="col" class="num">Impresiones</th>
+            <th scope="col" class="num">Posición</th>
+            <th scope="col" class="num">CTR</th>
+            <th scope="col">Qué hacer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">s&amp;p 500</th><td class="num">55.253</td><td class="num">4,2</td><td class="num">1,0%</td><td>Guía de servicio: qué es el S&amp;P 500, cómo se invierte desde América Latina y cuánto rinde en 2026. En el archivo del sitio no hay una.</td></tr>
+          <tr><th scope="row">peso colombiano</th><td class="num">14.638</td><td class="num">6,0</td><td class="num">0,09%</td><td>Cuando el peso colombiano lidere, nombrarlo en el titular de la nota de monedas. En julio el titular decía «la moneda más fuerte del mundo» sin decir cuál era.</td></tr>
+          <tr><th scope="row">usd / cop</th><td class="num">13.884</td><td class="num">7,1</td><td class="num">0,2%</td><td>La misma búsqueda del peso: poner el dólar en Colombia (cierre del mes) en la tabla de la nota de monedas.</td></tr>
+          <tr><th scope="row">acciones santander</th><td class="num">5.616</td><td class="num">3,9</td><td class="num">0,2%</td><td>Actualizar la nota de julio sobre las acciones de Santander con el precio y la fecha en el título: aparece arriba y casi nadie hace clic.</td></tr>
+          <tr><th scope="row">precio del dolar</th><td class="num">45.586</td><td class="num">5,8</td><td class="num">0,06%</td><td>Llevar «precio del dólar» al titular de la nota de monedas, como en julio.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-stop">
+    <div class="sec-head">
+      <p class="eyebrow">Recortes</p>
+      <h2 id="s-stop">Qué dejar de publicar</h2>
+    </div>
+    <ul class="stop">
+      <li><h3>La visión de un banco sin pregunta ni país</h3><p>«BofA alerta que cada vez es más difícil encontrar monedas emergentes baratas» (123), las OPI según Goldman Sachs (139) y los bonos de Brasil según Morgan Stanley (140) en su primera semana. Con la pregunta del lector, el mismo tipo de nota rinde: la cartera de BofA en la región (1.403).</p></li>
+      <li><h3>Una nota por banco sobre el mismo tema</h3><p>Colombia después del sismo: Goldman Sachs (317), UBS (279), Bloomberg Economics (183) y Oxford Economics (139). La que juntó el tema llegó a 1.509.</p></li>
+      <li><h3>Apple en cada movimiento</h3><p>La acción minuto a minuto en la keynote (120), la reacción al nuevo CEO (234) y el rebote (231). Con claves y otra empresa al lado sí rindió: «Apple se desploma y Amazon se dispara» (942).</p></li>
+      <li><h3>Materias primas de nicho</h3><p>El azúcar ante El Niño, dos veces (126 y 225) y la caja de las petroleras (107). El oro, en cambio, tuvo mediana de 911.</p></li>
+      <li><h3>Empresas lejanas a la región y al bolsillo</h3><p>Live Nation (52), Kalshi (251) y la salida a bolsa de Shein (317) en su primera semana.</p></li>
+      <li><h3>Bonos sin traducción al bolsillo</h3><p>Los niveles de BofA para los bonos (96) y el cambio de estrategia de Citi (284). Cuando los bonos se cuentan por su efecto en el dólar, el oro y la región, rinden: la venta masiva de bonos (1.365).</p></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Fuentes. Google Analytics 4 («All Sites GA4 Nuevo»), informe Páginas y pantallas con la fecha como dimensión secundaria, vistas del 20 de julio al 20 de septiembre de 2026 en rutas con /mercados/ (cuadradas contra el total del informe) y en las dos notas de Carlos fuera de esa ruta. Se cuentan solo las notas que firma Carlos Rodríguez Salcedo según el feed de su página de autor y los datos estructurados de cada nota. Cada nota se mide por sus vistas del día de publicación y los 6 siguientes (hora de Bogotá). Search Console: clics por página en Search y Discover del 20 de julio al 20 de septiembre, y consultas del 24 de agosto al 20 de septiembre, en páginas con /mercados/. Las cifras de notas anteriores al periodo (series de monedas, Nubank, horario y feriados) salen del mismo informe de GA4, filtrado por cada nota en sus primeros 7 días. Cada nota se asigna a un tema y a un formato según su titular vigente (en las notas del día, el titular puede cambiar durante la jornada).</p>
+    <p>Impacto de las propuestas: Slack de Bloomberg Línea (#the-morning-call, #cendesk-general y DM de SEO con Carlos), revisado hasta el 21 de septiembre de 2026; GA4 del 20 de julio al 20 de septiembre de 2026.</p>
+    <p>Fechas del calendario: <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">Reserva Federal</a> · <a href="https://www.tse.jus.br/comunicacao/noticias/2026/Marco/eleicoes-2026-confira-as-principais-datas-do-calendario-eleitoral">TSE (elecciones de Brasil)</a> · <a href="https://www.timeanddate.com/time/change/usa">Cambio de horario en EE.UU.</a></p>
+  </footer>
+</div>
+
+<script>
+(() => {
+  const DATA = [{"d":"2026-07-20","e":0,"ra":0,"o":1527},{"d":"2026-07-21","e":0,"ra":0,"o":2458},{"d":"2026-07-22","e":0,"ra":0,"o":4463},{"d":"2026-07-23","e":0,"ra":0,"o":3594},{"d":"2026-07-24","e":0,"ra":0,"o":3882},{"d":"2026-07-25","e":0,"ra":0,"o":1611},{"d":"2026-07-26","e":0,"ra":0,"o":1842},{"d":"2026-07-27","e":0,"ra":0,"o":4268},{"d":"2026-07-28","e":0,"ra":0,"o":3442},{"d":"2026-07-29","e":0,"ra":0,"o":5382},{"d":"2026-07-30","e":0,"ra":0,"o":6173},{"d":"2026-07-31","e":0,"ra":0,"o":11884},{"d":"2026-08-01","e":0,"ra":0,"o":10078},{"d":"2026-08-02","e":0,"ra":0,"o":2536},{"d":"2026-08-03","e":0,"ra":0,"o":3099},{"d":"2026-08-04","e":0,"ra":0,"o":3263},{"d":"2026-08-05","e":0,"ra":0,"o":4844},{"d":"2026-08-06","e":0,"ra":0,"o":4034},{"d":"2026-08-07","e":0,"ra":0,"o":2147},{"d":"2026-08-08","e":0,"ra":0,"o":750},{"d":"2026-08-09","e":0,"ra":0,"o":841},{"d":"2026-08-10","e":0,"ra":0,"o":2738},{"d":"2026-08-11","e":0,"ra":0,"o":3006},{"d":"2026-08-12","e":0,"ra":0,"o":4929},{"d":"2026-08-13","e":0,"ra":0,"o":5537},{"d":"2026-08-14","e":0,"ra":0,"o":5031},{"d":"2026-08-15","e":0,"ra":0,"o":2031},{"d":"2026-08-16","e":0,"ra":0,"o":1426},{"d":"2026-08-17","e":0,"ra":0,"o":1497},{"d":"2026-08-18","e":0,"ra":0,"o":5473},{"d":"2026-08-19","e":0,"ra":0,"o":6991},{"d":"2026-08-20","e":0,"ra":0,"o":4124},{"d":"2026-08-21","e":0,"ra":0,"o":2893},{"d":"2026-08-22","e":0,"ra":0,"o":1825},{"d":"2026-08-23","e":0,"ra":0,"o":1334},{"d":"2026-08-24","e":0,"ra":0,"o":2982},{"d":"2026-08-25","e":0,"ra":0,"o":2646},{"d":"2026-08-26","e":0,"ra":0,"o":2818},{"d":"2026-08-27","e":0,"ra":0,"o":3681},{"d":"2026-08-28","e":0,"ra":0,"o":4703},{"d":"2026-08-29","e":0,"ra":0,"o":1626},{"d":"2026-08-30","e":0,"ra":0,"o":1422},{"d":"2026-08-31","e":0,"ra":0,"o":3426},{"d":"2026-09-01","e":0,"ra":0,"o":4325},{"d":"2026-09-02","e":0,"ra":0,"o":2226},{"d":"2026-09-03","e":0,"ra":0,"o":3111},{"d":"2026-09-04","e":0,"ra":0,"o":4477},{"d":"2026-09-05","e":0,"ra":0,"o":1972},{"d":"2026-09-06","e":0,"ra":0,"o":1017},{"d":"2026-09-07","e":0,"ra":0,"o":3955},{"d":"2026-09-08","e":0,"ra":350,"o":2964},{"d":"2026-09-09","e":0,"ra":123,"o":3541},{"d":"2026-09-10","e":0,"ra":172,"o":4462},{"d":"2026-09-11","e":0,"ra":56,"o":2892},{"d":"2026-09-12","e":0,"ra":17,"o":971},{"d":"2026-09-13","e":0,"ra":8,"o":623},{"d":"2026-09-14","e":0,"ra":11,"o":3894},{"d":"2026-09-15","e":0,"ra":3,"o":3477},{"d":"2026-09-16","e":0,"ra":5,"o":8028},{"d":"2026-09-17","e":0,"ra":3,"o":4891},{"d":"2026-09-18","e":0,"ra":3,"o":3061},{"d":"2026-09-19","e":0,"ra":1,"o":1217},{"d":"2026-09-20","e":0,"ra":0,"o":766}];
+  const EVENTS = [{"d":"2026-09-08","n":1,"t":"SEO propone las palabras clave de la nota del precio del nuevo iPhone."},{"d":"2026-09-10","n":2,"t":"Carlos pide revisar su nota sobre la acción de Apple; SEO le deja cuatro recomendaciones."}];
+  const ANNO = {"d": "2026-07-31", "t": "Monedas de julio"};
+  const MES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  const box = document.getElementById('chart');
+  const tip = document.getElementById('tip');
+  const nf = n => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  const dt = s => { const [y, m, d] = s.split('-').map(Number); return new Date(Date.UTC(y, m - 1, d)); };
+  const lab = s => { const t = dt(s); return t.getUTCDate() + ' ' + MES[t.getUTCMonth()]; };
+  const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+  const tot = DATA.map(p => p.e + p.ra + p.o);
+  const ma = tot.map((v, i) => i < 6 ? null : tot.slice(i - 6, i + 1).reduce((a, b) => a + b, 0) / 7);
+  let geo = null;
+
+  function draw() {
+    const W = Math.max(box.clientWidth, 280);
+    const H = W < 600 ? 300 : 380;
+    const m = { l: W < 600 ? 40 : 50, r: 12, t: 34, b: 30 };
+    const iw = W - m.l - m.r, ih = H - m.t - m.b, n = DATA.length;
+    const step = 3000, ymax = Math.ceil(Math.max(...tot) / step) * step;
+    const x = i => m.l + i * (iw / (n - 1));
+    const y = v => m.t + ih - (v / ymax) * ih;
+    const area = (lo, hi) => {
+      let s = '';
+      for (let i = 0; i < n; i++) s += (i ? 'L' : 'M') + x(i).toFixed(1) + ',' + y(hi[i]).toFixed(1);
+      for (let i = n - 1; i >= 0; i--) s += 'L' + x(i).toFixed(1) + ',' + y(lo[i]).toFixed(1);
+      return s + 'Z';
+    };
+    const zero = DATA.map(() => 0), o = DATA.map(p => p.o), ora = DATA.map(p => p.o + p.ra);
+    const surf = css('--surface'), ink = css('--ink'), ink2 = css('--ink-2'), rule = css('--rule');
+    let g = '';
+    for (let v = 0; v <= ymax; v += step) {
+      g += `<line x1="${m.l}" x2="${W - m.r}" y1="${y(v)}" y2="${y(v)}" stroke="${rule}" stroke-width="1"/>`;
+      g += `<text class="tick" x="${m.l - 8}" y="${y(v) + 4}" text-anchor="end">${v === 0 ? '0' : (v / 1000) + ' mil'}</text>`;
+    }
+    DATA.forEach((p, i) => {
+      if (dt(p.d).getUTCDay() === 1 && (W >= 600 || i % 14 === 0)) {
+        g += `<line x1="${x(i)}" x2="${x(i)}" y1="${m.t + ih}" y2="${m.t + ih + 5}" stroke="${ink2}" stroke-width="1"/>`;
+        g += `<text class="tick" x="${x(i)}" y="${m.t + ih + 19}" text-anchor="middle">${lab(p.d)}</text>`;
+      }
+    });
+    g += `<path d="${area(zero, o)}" fill="${css('--c-rest')}" stroke="${surf}" stroke-width="1"/>`;
+    g += `<path d="${area(o, ora)}" fill="${css('--c-rev')}" stroke="${surf}" stroke-width="1"/>`;
+    g += `<path d="${area(ora, tot)}" fill="${css('--c-prop')}" stroke="${surf}" stroke-width="1"/>`;
+    let ml = '';
+    ma.forEach((v, i) => { if (v !== null) ml += (ml ? 'L' : 'M') + x(i).toFixed(1) + ',' + y(v).toFixed(1); });
+    g += `<path d="${ml}" fill="none" stroke="${ink}" stroke-width="2" stroke-linejoin="round" opacity=".8"/>`;
+    const iAn = DATA.findIndex(p => p.d === ANNO.d);
+    if (iAn >= 0) g += `<text class="anno" x="${x(iAn) + 8}" y="${y(tot[iAn]) + 12}">${ANNO.t}</text>`;
+    const evs = EVENTS.map(e => ({ n: e.n, i: DATA.findIndex(p => p.d === e.d) })).filter(o => o.i >= 0).sort((a, b) => a.i - b.i);
+    evs.forEach((o, k) => { o.cx = x(o.i); if (k && o.cx < evs[k - 1].cx + 23) o.cx = evs[k - 1].cx + 23; });
+    for (let k = evs.length - 1; k >= 0; k--) {
+      const lim = k === evs.length - 1 ? W - 11 : evs[k + 1].cx - 23;
+      if (evs[k].cx > lim) evs[k].cx = lim;
+    }
+    evs.forEach(o => {
+      const lx = x(o.i);
+      g += `<path d="M${lx},${m.t + ih}V${m.t - 2}L${o.cx},${m.t - 10}" fill="none" stroke="${ink2}" stroke-width="1" stroke-dasharray="3 3"/>`;
+      g += `<circle cx="${o.cx}" cy="${m.t - 20}" r="10" fill="${surf}" stroke="${ink}" stroke-width="1.5"/>`;
+      g += `<text class="evnum" x="${o.cx}" y="${m.t - 16}" text-anchor="middle">${o.n}</text>`;
+    });
+    g += `<line id="guide" x1="0" x2="0" y1="${m.t}" y2="${m.t + ih}" stroke="${ink}" stroke-width="1" visibility="hidden"/>`;
+    g += `<rect id="hit" x="${m.l}" y="${m.t}" width="${iw}" height="${ih}" fill="transparent"/>`;
+    box.innerHTML = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" aria-hidden="true">${g}</svg>`;
+    geo = { m, iw, ih, n, x, W };
+  }
+
+  function show(ev) {
+    if (!geo) return;
+    const r = box.getBoundingClientRect();
+    const px = ev.clientX - r.left;
+    const i = Math.max(0, Math.min(geo.n - 1, Math.round((px - geo.m.l) / (geo.iw / (geo.n - 1)))));
+    const p = DATA[i], X = geo.x(i);
+    const gl = box.querySelector('#guide');
+    gl.setAttribute('x1', X); gl.setAttribute('x2', X); gl.setAttribute('visibility', 'visible');
+    tip.innerHTML = `<b>${lab(p.d)}</b>` +
+      (p.e ? `<div class="row"><i style="background:var(--c-prop)"></i><span>Tema propuesto por SEO</span><span>${nf(p.e)}</span></div>` : '') +
+      `<div class="row"><i style="background:var(--c-rev)"></i><span>Revisada por SEO</span><span>${nf(p.ra)}</span></div>` +
+      `<div class="row"><i style="background:var(--c-rest)"></i><span>Resto de sus notas</span><span>${nf(p.o)}</span></div>` +
+      `<div class="row tot"><i></i><span>Total del día</span><b>${nf(tot[i])}</b></div>` +
+      (ma[i] !== null ? `<div class="row"><i></i><span>Promedio de 7 días</span><span>${nf(ma[i])}</span></div>` : '');
+    tip.hidden = false;
+    const tw = tip.offsetWidth, cw = box.parentElement.clientWidth;
+    const left = X + 16 + tw > cw ? X - tw - 6 : X + 16;
+    tip.style.transform = `translate(${Math.max(4, left)}px, 20px)`;
+  }
+  function hide() { tip.hidden = true; const gl = box.querySelector('#guide'); if (gl) gl.setAttribute('visibility', 'hidden'); }
+
+  box.addEventListener('pointermove', show);
+  box.addEventListener('pointerdown', show);
+  box.addEventListener('pointerleave', hide);
+  let t = null;
+  new ResizeObserver(() => { clearTimeout(t); t = setTimeout(draw, 80); }).observe(box);
+  new MutationObserver(draw).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  try { matchMedia('(prefers-color-scheme: dark)').addEventListener('change', draw); } catch (e) {}
+  draw();
+})();
+</script>
+</body>
+</html>
