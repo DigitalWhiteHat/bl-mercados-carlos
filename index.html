@@ -406,9 +406,10 @@
   .imp .que { margin-top: 6px; font: 400 14px/1.45 var(--serif); color: var(--ink-2); max-width: 36ch; }
   .imp .nota { font: 500 14.5px/1.4 var(--sans); color: var(--ink); max-width: 44ch; }
   .imp .meta { display: block; margin-top: 4px; font: 400 12.5px/1.3 var(--sans); color: var(--muted); }
-  .imp td.res { white-space: nowrap; }
+  .imp td.res { min-width: 10em; max-width: 13em; }
   .imp td.res .big { display: block; font: 700 18px/1.1 var(--sans); font-variant-numeric: tabular-nums; color: var(--ink); }
-  .imp td.res small { font: 400 12.5px/1.3 var(--sans); color: var(--muted); }
+  .imp td.res small { display: block; margin-top: 3px; font: 400 12.5px/1.35 var(--sans); color: var(--muted); }
+  .imp .t-prop td:nth-child(2) { min-width: 14em; }
   .imp .rel { display: inline-flex; align-items: center; font: 650 12.5px/1 var(--sans); padding: 6px 10px; border-radius: 999px; white-space: nowrap; }
   .imp .rel.hi { color: var(--good); background: var(--good-bg); }
   .imp .rel.up { color: var(--good); background: transparent; border: 1.5px solid var(--good); }
@@ -464,6 +465,14 @@
   .imp .nb-val small { display: block; margin-top: 2px; font: 400 12px/1.3 var(--sans); color: var(--muted); }
   .imp .nb figcaption { margin-top: 10px; }
   .imp .t-sem { min-width: 560px; }
+  .imp .t-vida { min-width: 640px; }
+  .imp .t-vida thead th.num { white-space: normal; }
+  .imp .t-vida tbody th { font: 500 14px/1.35 var(--sans); color: var(--ink); max-width: 30em; }
+  .imp .t-vida tbody th small { display: block; margin-top: 3px; font: 400 12.5px/1.3 var(--sans); color: var(--muted); }
+  .imp .t-vida td small { color: var(--muted); font-size: 12.5px; }
+  .imp .t-vida tr.top th, .imp .t-vida tr.top td { background: var(--accent-track); }
+  .imp .legend .k-a { background: transparent; border: 2px solid var(--c-rev); box-sizing: border-box; }
+  .imp .nb .bar .fill.k-a { background: transparent; border: 2px solid var(--c-rev); box-sizing: border-box; }
   .imp .t-sem thead th.num { white-space: normal; }
   .imp .t-sem tbody th { white-space: nowrap; }
   .imp .t-sem tr.top th, .imp .t-sem tr.top td { font-weight: 650; color: var(--ink); background: var(--accent-track); }
@@ -486,7 +495,9 @@
     <nav class="bl-nav" aria-label="Secciones">
       <a href="#s-guia">Guía</a>
       <a href="#s-impacto">Impacto</a>
+      <a href="#s-como">Con SEO</a>
       <a href="#s-tipica">Nota por nota</a>
+      <a href="#s-vida">Vida larga</a>
       <a href="#s-prop">Propuestas</a>
       <a href="#s-foto">La foto</a>
       <a href="#s-temas">Temas</a>
@@ -514,7 +525,7 @@
         <div><dt>Mediana por nota</dt><dd>564 vistas<small>en sus primeros 7 días</small></dd></div>
         <div><dt>Superan 1.000 vistas</dt><dd>22%<small>en su primera semana</small></dd></div>
         <div><dt>Llegan por Discover</dt><dd>77%<small>de sus clics desde Google</small></dd></div>
-        <div><dt>Notas con SEO</dt><dd>2<small>desde el 8 de septiembre</small></dd></div>
+        <div><dt>Notas con SEO</dt><dd>15<small>desde el 8 de enero de 2025</small></dd></div>
       </dl>
     </div>
     <div class="bezel" aria-hidden="true"></div>
@@ -603,111 +614,180 @@
   </section>
   <!-- fin-guia -->
 
-  <p class="parte"><span>2</span>El impacto de las propuestas</p>
+  <p class="parte"><span>2</span>El impacto de SEO en su trabajo</p>
   <div class="imp">
   <section aria-labelledby="s-impacto">
     <div class="sec-head">
-      <p class="eyebrow">Línea de tiempo</p>
-      <h2 id="s-impacto">Dos notas con SEO en dos meses de notas de Carlos</h2>
-      <p>SEO empezó a revisar notas de Carlos el 8 de septiembre, en #the-morning-call y #cendesk-general. Desde entonces, las dos notas con su intervención sumaron 752 vistas, el 1,8% de lo que se leyó de Carlos en esos días.</p>
-      <p>Sus notas promediaron 3.443 vistas diarias entre el 20 de julio y el 20 de septiembre. La semana más alta fue la del 27 de julio al 2 de agosto, con 6.252 vistas por día, por la nota de las monedas de julio.</p>
+      <p class="eyebrow">Desde enero de 2025</p>
+      <h2 id="s-impacto">10 de 15 notas con SEO rindieron más que la típica de sus días</h2>
+      <p>SEO trabaja con Carlos desde el 8 de enero de 2025, en #cendesk-general y #the-morning-call. En Slack hay 15 notas suyas en las que SEO propuso el tema, ajustó el titular o revisó la nota antes de publicarla. Cada una se compara con sus otras notas de Mercados publicadas 3 días antes o después. En su primera semana, 10 rindieron más que esa nota típica, y la mediana quedó en 1,5 veces.</p>
     </div>
     <dl class="tiles">
-      <div><dt>Vistas diarias de sus notas</dt><dd>3.443<small>promedio del 20 jul al 20 sep</small></dd></div>
-      <div><dt>Notas con SEO</dt><dd>2<small>8 y 10 de septiembre</small></dd></div>
-      <div><dt>Clics de búsqueda, notas con SEO</dt><dd>92 y 78<small>la nota típica de esos días: 53</small></dd></div>
-      <div><dt>Primera semana, notas con SEO</dt><dd>510 y 231<small>vistas; la típica de esos días: 408</small></dd></div>
+      <div><dt>Notas con SEO</dt><dd>15<small>desde el 8 de enero de 2025</small></dd></div>
+      <div><dt>Por encima de la típica</dt><dd>10 de 15<small>en su primera semana</small></dd></div>
+      <div><dt>Frente a la típica</dt><dd>1,5 veces<small>mediana de las vistas en 7 días</small></dd></div>
+      <div><dt>Siguen trayendo lectores</dt><dd>3 de 11<small>notas viejas con SEO, meses después</small></dd></div>
     </dl>
-    <div class="legend">
-      <span><i class="k-rev"></i>Nota revisada por SEO</span>
-      <span><i class="k-rest"></i>Resto de sus notas</span>
-      <span><i class="k-ma"></i>Promedio de 7 días</span>
-    </div>
-    <div class="chart-card">
-      <div id="chart" role="img" aria-label="Vistas diarias de las notas de Carlos Rodríguez Salcedo, del 20 de julio al 20 de septiembre de 2026, con las notas revisadas por SEO."></div>
-      <div class="tip" id="tip" hidden></div>
-    </div>
-    <ol class="events">
-      <li><span class="num">1</span><span><b>8 sep.</b> SEO propone las palabras clave de la nota del precio del nuevo iPhone.</span></li>
-      <li><span class="num">2</span><span><b>10 sep.</b> Carlos pide revisar su nota sobre la acción de Apple; SEO le deja cuatro recomendaciones.</span></li>
-    </ol>
-  </section>
-
-  <section aria-labelledby="s-ab">
-    <div class="sec-head">
-      <p class="eyebrow">Semana a semana</p>
-      <h2 id="s-ab">La línea base para medir lo que viene</h2>
-      <p>Con dos intervenciones todavía no hay un antes y un después que medir. Esta tabla deja la línea base: las vistas diarias de todas las notas de Carlos, semana a semana, y la mediana de la primera semana de las que publicó en cada una.</p>
-    </div>
-    <div class="table-wrap">
-      <table class="t-sem" aria-label="Vistas diarias de las notas de Carlos por semana">
-        <thead><tr><th scope="col">Semana</th><th scope="col" class="num">Vistas por día</th><th scope="col" class="num">Notas publicadas</th><th scope="col" class="num">Mediana en 7 días</th><th scope="col" class="num">Parte con SEO</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">20 jul – 26 jul</th><td class="num">2.768</td><td class="num">22</td><td class="num">700</td><td class="num">—</td></tr>
-          <tr class="top"><th scope="row">27 jul – 2 ago</th><td class="num">6.252</td><td class="num">26</td><td class="num">658</td><td class="num">—</td></tr>
-          <tr><th scope="row">3 ago – 9 ago</th><td class="num">2.711</td><td class="num">22</td><td class="num">434</td><td class="num">—</td></tr>
-          <tr><th scope="row">10 ago – 16 ago</th><td class="num">3.528</td><td class="num">29</td><td class="num">586</td><td class="num">—</td></tr>
-          <tr><th scope="row">17 ago – 23 ago</th><td class="num">3.448</td><td class="num">21</td><td class="num">589</td><td class="num">—</td></tr>
-          <tr><th scope="row">24 ago – 30 ago</th><td class="num">2.840</td><td class="num">27</td><td class="num">526</td><td class="num">—</td></tr>
-          <tr><th scope="row">31 ago – 6 sep</th><td class="num">2.936</td><td class="num">25</td><td class="num">651</td><td class="num">—</td></tr>
-          <tr><th scope="row">7 sep – 13 sep</th><td class="num">2.876</td><td class="num">29</td><td class="num">409</td><td class="num">3,6%</td></tr>
-          <tr><th scope="row">14 sep – 20 sep</th><td class="num">3.623</td><td class="num">26</td><td class="num">—</td><td class="num">0,1%</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note">Vistas de GA4 de todas las notas que firma Carlos, incluidas las de meses anteriores que siguen recibiendo lectores. La mediana solo se da cuando todas las notas de la semana ya cumplieron 7 días.</p>
-  </section>
-
-  <section aria-labelledby="s-tipica">
-    <div class="sec-head">
-      <p class="eyebrow">Frente a la nota típica</p>
-      <h2 id="s-tipica">Las notas con SEO ganaron búsqueda</h2>
-      <p>Cada barra es una nota de Carlos en la que intervino SEO. La línea vertical marca la nota típica: la mediana de las otras 21 notas que publicó del 8 al 13 de septiembre.</p>
-    </div>
-    <div class="legend">
-      <span><i class="k-rev"></i>Titular o nota revisados por SEO</span>
-      <span><i class="k-ref"></i>Nota típica de esos días: 408 vistas</span>
-    </div>
-    <figure class="nb" aria-label="Vistas en la primera semana de cada nota de Carlos con intervención de SEO, frente a la nota típica">
-      <ol class="nb-list">
-        <li class="nb-row" title="¿Cuánto costará el nuevo iPhone? Esto anticipan JPMorgan, Bank of America y Citi para el Apple Event: 510 vistas en 7 días y 92 clics de búsqueda"><span class="nb-lab">¿Cuánto costará el nuevo iPhone?<small>Titular o nota · 8 sep</small></span><span class="bar" style="--w:51.0%;--mid:40.8%"><span class="fill k-r"></span><span class="mid"></span></span><span class="nb-val">510<small>1,3 veces · búsqueda 1,7 veces</small></span></li>
-        <li class="nb-row" title="Acción de Apple rebota en bolsa: ¿es hora de invertir? Este es el precio objetivo de Wall Street: 231 vistas en 7 días y 78 clics de búsqueda"><span class="nb-lab">Acción de Apple rebota en bolsa<small>Titular o nota · 10 sep</small></span><span class="bar" style="--w:23.1%;--mid:40.8%"><span class="fill k-r"></span><span class="mid"></span></span><span class="nb-val">231<small>0,6 veces · búsqueda 1,5 veces</small></span></li>
-      </ol>
-      <figcaption class="note">Vistas de GA4 en los primeros 7 días de cada nota. Debajo, cuántas veces rindió la nota típica en vistas y en clics de búsqueda de Search Console (53 en la típica).</figcaption>
-    </figure>
     <div class="compare">
       <div>
-        <h3>Clics de búsqueda</h3>
-        <p class="vs"><b class="a">92 y 78</b><span>las dos notas con SEO</span><b class="b">53</b><span>la nota típica del 8 al 13 de septiembre</span></p>
-        <p>Las recomendaciones de SEO (palabras clave, H2 en pregunta, tabla con precios objetivo) apuntan a búsqueda, y ahí las dos notas superaron a la típica.</p>
+        <h3>Donde SEO sumó</h3>
+        <p>Los temas de servicio con una búsqueda detrás. Los tres de enero de 2025 (el dólar en Bolivia, bitcoin con la posesión de Trump y las criptomonedas de Trump) hicieron entre 6,0 y 11,5 veces la típica. El explicador de la OPEP hizo 4,3 veces con el titular que propuso SEO, y el horario de las bolsas, 1,8 veces; seis meses después sigue trayendo búsquedas.</p>
       </div>
       <div>
-        <h3>Vistas en la primera semana</h3>
-        <p class="vs"><b class="a">510 y 231</b><span>las dos notas con SEO</span><b class="b">408</b><span>la nota típica de esos días</span></p>
-        <p>En vistas, una quedó arriba y otra abajo. Las dos eran de Apple en la semana del Apple Event y casi no tuvieron tráfico de Discover (1 y 4 clics), que es por donde llega el 77% de los clics de Google de Carlos.</p>
+        <h3>Donde no alcanzó</h3>
+        <p>La nota aparte de Perú quedó en 0,3 veces la típica, mientras la regional de ese día, con Perú y Chile en el titular, hizo 13.799 vistas. Apple en la semana del Apple Event (0,6) y MercadoLibre al tercer día (0,8) tampoco despegaron. Santander trajo 289 clics de búsqueda, 8,5 veces la típica, pero pocas vistas: en «acciones santander» sale en la posición 3,9 y solo el 0,2% hace clic.</p>
       </div>
     </div>
+  </section>
+
+  <section aria-labelledby="s-como">
+    <div class="sec-head">
+      <p class="eyebrow">Lo que muestra Slack</p>
+      <h2 id="s-como">Carlos toma lo que propone SEO y lo ajusta a la nota</h2>
+    </div>
+    <ul class="caveats">
+      <li><b>Pide la revisión.</b> En 8 de las 15 notas fue Carlos quien la mandó a revisar, desde marzo de 2026.</li>
+      <li><b>Toma los temas.</b> Los 7 temas que SEO le propuso salieron publicados, casi todos el mismo día.</li>
+      <li><b>Ajusta los titulares.</b> De 8 propuestas de titular o estructura, 2 salieron palabra por palabra, 5 con ajustes y en 1 se quedó con su versión. Cuando cambia algo es por precisión: no pone en el titular lo que la nota no dice, ni una cifra que cambia durante el día.</li>
+      <li><b>Por tipo.</b> Con tema propuesto por SEO, 4 de 7 notas superaron a la típica. Con titular o estructura, 4 de 6. Las 2 que SEO revisó sin pedir cambios también la superaron: Carlos manda a revisar las que ya ve con potencial.</li>
+      <li><b>Dónde no llega.</b> Su radar de la mañana trae Wall Street, dos o tres informes de bancos y «Línea de Mercado». Los temas SEO van en una línea aparte, y las visiones de bancos, que son el 22% de lo que publica, casi nunca pasan por SEO.</li>
+    </ul>
     <blockquote>
       <p>«[…] buenas las recomendaciones».</p>
       <footer>Carlos Rodríguez Salcedo, en #cendesk-general, 10 de septiembre de 2026</footer>
     </blockquote>
   </section>
 
+  <section aria-labelledby="s-tipica">
+    <div class="sec-head">
+      <p class="eyebrow">Frente a la nota típica</p>
+      <h2 id="s-tipica">Nota por nota, en su primera semana</h2>
+      <p>Cada barra es una nota de Carlos en la que intervino SEO. La línea vertical marca la nota típica de esos días: la mediana de sus otras notas de Mercados publicadas 3 días antes o después.</p>
+    </div>
+    <div class="legend">
+      <span><i class="k-prop"></i>Tema propuesto por SEO</span>
+      <span><i class="k-rev"></i>Titular o estructura de SEO</span>
+      <span><i class="k-a"></i>Revisión sin cambios</span>
+      <span><i class="k-ref"></i>Nota típica de esos días</span>
+    </div>
+    <figure class="nb" aria-label="Vistas en la primera semana de cada nota de Carlos con intervención de SEO, frente a la nota típica de esos días">
+      <ol class="nb-list">
+        <li class="nb-row" title="Dólar en Bolivia en 2025: analistas ven presiones en el mercado paralelo y las reservas: 1.130 vistas en 7 días; la típica de esos días, 187"><span class="nb-lab">Dólar en Bolivia en 2025<small>Tema o ángulo · 10 ene 2025</small></span><span class="bar" style="--w:32.3%;--mid:5.3%"><span class="fill k-e"></span><span class="mid"></span></span><span class="nb-val">1.130<small>6,0 veces la típica (187)</small></span></li>
+        <li class="nb-row" title="Cómo afectará la posesión de Trump al bitcoin y al mercado cripto: 2.670 vistas en 7 días; la típica de esos días, 232"><span class="nb-lab">Cómo afectará la posesión de Trump al bitcoin y al mercado cripto<small>Tema o ángulo · 16 ene 2025</small></span><span class="bar" style="--w:76.3%;--mid:6.6%"><span class="fill k-e"></span><span class="mid"></span></span><span class="nb-val">2.670<small>11,5 veces la típica (232)</small></span></li>
+        <li class="nb-row" title="¿Qué es y cómo invertir en $TRUMP y $MELANIA, las criptomonedas de Donald Trump?: 3.113 vistas en 7 días; la típica de esos días, 394"><span class="nb-lab">¿Qué es y cómo invertir en $TRUMP y $MELANIA, las criptomonedas de…<small>Tema o ángulo · 20 ene 2025</small></span><span class="bar" style="--w:88.9%;--mid:11.3%"><span class="fill k-e"></span><span class="mid"></span></span><span class="nb-val">3.113<small>7,9 veces la típica (394)</small></span></li>
+        <li class="nb-row" title="La acción de MercadoLibre cayó por segundo día y Wall Street vigila el ciclo de inversión: 1.326 vistas en 7 días; la típica de esos días, 1.581"><span class="nb-lab">La acción de MercadoLibre cayó por segundo día y Wall Street…<small>Tema o ángulo · 26 feb</small></span><span class="bar" style="--w:37.9%;--mid:45.2%"><span class="fill k-e"></span><span class="mid"></span></span><span class="nb-val">1.326<small>0,8 veces la típica (1.581)</small></span></li>
+        <li class="nb-row" title="Dólar, bonos y acciones: el mapa de riesgos del conflicto en Irán para los mercados emergentes: 989 vistas en 7 días; la típica de esos días, 1.117"><span class="nb-lab">Dólar, bonos y acciones<small>Titular o estructura · 5 mar</small></span><span class="bar" style="--w:28.3%;--mid:31.9%"><span class="fill k-r"></span><span class="mid"></span></span><span class="nb-val">989<small>0,9 veces la típica (1.117)</small></span></li>
+        <li class="nb-row" title="EE.UU. cambia de horario: ¿a qué hora abre Wall Street y las bolsas de México, Colombia y la región este verano 2026?: 2.051 vistas en 7 días; la típica de esos días, 1.117"><span class="nb-lab">EE.UU. cambia de horario<small>Titular o estructura · 5 mar</small></span><span class="bar" style="--w:58.6%;--mid:31.9%"><span class="fill k-r"></span><span class="mid"></span></span><span class="nb-val">2.051<small>1,8 veces la típica (1.117)</small></span></li>
+        <li class="nb-row" title="Precio del dólar en Perú: las razones detrás del histórico repunte del sol este martes: 346 vistas en 7 días; la típica de esos días, 1.093"><span class="nb-lab">Precio del dólar en Perú<small>Titular o estructura · 10 mar</small></span><span class="bar" style="--w:9.9%;--mid:31.2%"><span class="fill k-r"></span><span class="mid"></span></span><span class="nb-val">346<small>0,3 veces la típica (1.093)</small></span></li>
+        <li class="nb-row" title="Reservas estratégicas de petróleo: qué son, cómo funcionan y qué países tienen más días de suministro: 1.060 vistas en 7 días; la típica de esos días, 955"><span class="nb-lab">Reservas estratégicas de petróleo<small>Tema o ángulo · 11 mar</small></span><span class="bar" style="--w:30.3%;--mid:27.3%"><span class="fill k-e"></span><span class="mid"></span></span><span class="nb-val">1.060<small>1,1 veces la típica (955)</small></span></li>
+        <li class="nb-row" title="Qué es la OPEP y cinco claves sobre la salida de Emiratos Árabes Unidos y su efecto en el petróleo: 2.887 vistas en 7 días; la típica de esos días, 664"><span class="nb-lab">Qué es la OPEP y cinco claves sobre la salida de Emiratos Árabes…<small>Titular o estructura · 28 abr</small></span><span class="bar" style="--w:82.5%;--mid:19.0%"><span class="fill k-r"></span><span class="mid"></span></span><span class="nb-val">2.887<small>4,3 veces la típica (664)</small></span></li>
+        <li class="nb-row" title="¿Wall Street abre este 1 de mayo? Así operan las bolsas en EE.UU. y América Latina en el Día del Trabajo: 994 vistas en 7 días; la típica de esos días, 664"><span class="nb-lab">¿Wall Street abre este 1 de mayo?<small>Revisión sin cambios · 28 abr</small></span><span class="bar" style="--w:28.4%;--mid:19.0%"><span class="fill k-a"></span><span class="mid"></span></span><span class="nb-val">994<small>1,5 veces la típica (664)</small></span></li>
+        <li class="nb-row" title="¿Terminó la caída del precio del dólar? BBVA actualiza sus proyecciones para América Latina: 1.020 vistas en 7 días; la típica de esos días, 691"><span class="nb-lab">¿Terminó la caída del precio del dólar?<small>Titular o estructura · 6 jul</small></span><span class="bar" style="--w:29.1%;--mid:19.7%"><span class="fill k-r"></span><span class="mid"></span></span><span class="nb-val">1.020<small>1,5 veces la típica (691)</small></span></li>
+        <li class="nb-row" title="Evolución de las acciones de Santander en 2026: resultados récord y qué esperan los analistas: 246 vistas en 7 días; la típica de esos días, 778"><span class="nb-lab">Evolución de las acciones de Santander en 2026<small>Tema o ángulo · 24 jul</small></span><span class="bar" style="--w:7.0%;--mid:22.2%"><span class="fill k-e"></span><span class="mid"></span></span><span class="nb-val">246<small>0,3 veces la típica (778)</small></span></li>
+        <li class="nb-row" title="Bank of America mueve su cartera en América Latina: las acciones y países que tiene en el radar: 1.403 vistas en 7 días; la típica de esos días, 596"><span class="nb-lab">Bank of America mueve su cartera en América Latina<small>Revisión sin cambios · 3 sep</small></span><span class="bar" style="--w:40.1%;--mid:17.0%"><span class="fill k-a"></span><span class="mid"></span></span><span class="nb-val">1.403<small>2,4 veces la típica (596)</small></span></li>
+        <li class="nb-row" title="¿Cuánto costará el nuevo iPhone? Esto anticipan JPMorgan, Bank of America y Citi para el Apple Event: 510 vistas en 7 días; la típica de esos días, 409"><span class="nb-lab">¿Cuánto costará el nuevo iPhone?<small>Titular o estructura · 8 sep</small></span><span class="bar" style="--w:14.6%;--mid:11.7%"><span class="fill k-r"></span><span class="mid"></span></span><span class="nb-val">510<small>1,2 veces la típica (409)</small></span></li>
+        <li class="nb-row" title="Acción de Apple rebota en bolsa: ¿es hora de invertir? Este es el precio objetivo de Wall Street: 231 vistas en 7 días; la típica de esos días, 409"><span class="nb-lab">Acción de Apple rebota en bolsa<small>Tema o ángulo · 10 sep</small></span><span class="bar" style="--w:6.6%;--mid:11.7%"><span class="fill k-e"></span><span class="mid"></span></span><span class="nb-val">231<small>0,6 veces la típica (409)</small></span></li>
+      </ol>
+      <figcaption class="note">Vistas de GA4 en el día de publicación y los 6 siguientes (hora de Bogotá). Debajo, cuántas veces rindió la nota típica de esos días y cuánto hizo esa típica.</figcaption>
+    </figure>
+  </section>
+
+  <section aria-labelledby="s-vida">
+    <div class="sec-head">
+      <p class="eyebrow">Vida larga</p>
+      <h2 id="s-vida">Las que siguen trabajando</h2>
+      <p>Vistas y clics de búsqueda del 20 de julio al 20 de septiembre de las notas con SEO publicadas antes. Se comparan con sus otras notas publicadas 15 días antes o después. Lo que sigue vivo son los explicadores y el servicio; las de coyuntura se apagan en una semana, con SEO o sin él.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="t-vida" aria-label="Vistas y clics de búsqueda recientes de las notas viejas con SEO frente a sus otras notas de esos días">
+        <thead><tr><th scope="col">Nota</th><th scope="col" class="num">Vistas recientes</th><th scope="col" class="num">Sus otras notas de esos días (mediana / 10% más alto)</th><th scope="col" class="num">Clics de búsqueda</th><th scope="col" class="num">De sus otras notas, con algún clic</th></tr></thead>
+        <tbody>
+          <tr class="top"><th scope="row"><span class="nota-v">EE.UU. cambia de horario</span><small>Titular o estructura · 5 mar</small></th><td class="num">146</td><td class="num">3<small> / 16</small></td><td class="num">71</td><td class="num">6%</td></tr>
+          <tr><th scope="row"><span class="nota-v">¿Terminó la caída del precio del dólar?</span><small>Titular o estructura · 6 jul</small></th><td class="num">80</td><td class="num">36<small> / 177</small></td><td class="num">15</td><td class="num">40%</td></tr>
+          <tr class="top"><th scope="row"><span class="nota-v">Reservas estratégicas de petróleo</span><small>Tema o ángulo · 11 mar</small></th><td class="num">52</td><td class="num">3<small> / 17</small></td><td class="num">30</td><td class="num">6%</td></tr>
+          <tr class="top"><th scope="row"><span class="nota-v">Dólar en Bolivia en 2025</span><small>Tema o ángulo · 10 ene 2025</small></th><td class="num">34</td><td class="num">1<small> / 4</small></td><td class="num">0</td><td class="num">2%</td></tr>
+          <tr><th scope="row"><span class="nota-v">Qué es la OPEP y cinco claves sobre la salida de Emiratos Árabes…</span><small>Titular o estructura · 28 abr</small></th><td class="num">8</td><td class="num">4<small> / 24</small></td><td class="num">0</td><td class="num">11%</td></tr>
+          <tr><th scope="row"><span class="nota-v">¿Wall Street abre este 1 de mayo?</span><small>Revisión sin cambios · 28 abr</small></th><td class="num">4</td><td class="num">4<small> / 24</small></td><td class="num">0</td><td class="num">11%</td></tr>
+          <tr><th scope="row"><span class="nota-v">Dólar, bonos y acciones</span><small>Titular o estructura · 5 mar</small></th><td class="num">3</td><td class="num">3<small> / 16</small></td><td class="num">0</td><td class="num">6%</td></tr>
+          <tr><th scope="row"><span class="nota-v">Cómo afectará la posesión de Trump al bitcoin y al mercado cripto</span><small>Tema o ángulo · 16 ene 2025</small></th><td class="num">1</td><td class="num">1<small> / 4</small></td><td class="num">0</td><td class="num">2%</td></tr>
+          <tr><th scope="row"><span class="nota-v">¿Qué es y cómo invertir en $TRUMP y $MELANIA, las criptomonedas de…</span><small>Tema o ángulo · 20 ene 2025</small></th><td class="num">1</td><td class="num">1<small> / 4</small></td><td class="num">0</td><td class="num">2%</td></tr>
+          <tr><th scope="row"><span class="nota-v">La acción de MercadoLibre cayó por segundo día y Wall Street…</span><small>Tema o ángulo · 26 feb</small></th><td class="num">1</td><td class="num">4<small> / 19</small></td><td class="num">0</td><td class="num">9%</td></tr>
+          <tr><th scope="row"><span class="nota-v">Precio del dólar en Perú</span><small>Titular o estructura · 10 mar</small></th><td class="num">0</td><td class="num">4<small> / 17</small></td><td class="num">0</td><td class="num">6%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">El horario de las bolsas hizo 146 vistas y 71 clics de búsqueda en estas semanas. De sus otras notas de esos días, la mediana fue de 3 vistas y solo el 6% tuvo algún clic de búsqueda.</p>
+  </section>
+
   <section aria-labelledby="s-prop">
     <div class="sec-head">
       <p class="eyebrow">Una por una</p>
-      <h2 id="s-prop">Lo que propuso y lo que salió</h2>
-      <p>Cada intervención de SEO en Slack que terminó en una nota publicada de Carlos, del 8 al 10 de septiembre. «La típica» es la mediana de la primera semana de sus otras notas publicadas en esos días (408 vistas).</p>
+      <h2 id="s-prop">Lo que propuso SEO y lo que salió</h2>
+      <p>Cada intervención de SEO en Slack que terminó en una nota publicada de Carlos, del 8 de enero de 2025 al 21 de septiembre de 2026. «La típica» es la mediana de la primera semana de sus otras notas de Mercados publicadas 3 días antes o después. En las 4 más recientes también se comparan los clics de búsqueda, y las 4 superaron a la típica.</p>
     </div>
     <div class="table-wrap">
       <table class="t-prop" aria-label="Propuestas y revisiones de SEO y el resultado de cada nota">
         <thead><tr><th scope="col">Fecha</th><th scope="col">Qué hizo SEO</th><th scope="col">Nota publicada</th><th scope="col">Resultado</th><th scope="col">Frente a la típica</th></tr></thead>
         <tbody>
-          <tr><td class="when">8 sep<small>#the-morning-call</small></td><td><span class="tipo k-r"><i aria-hidden="true"></i>Titular o nota</span><p class="que">Propuso las palabras clave del titular: iPhone 18 Pro, precio, Pro Max y «cuánto costará».</p></td><td><p class="nota">¿Cuánto costará el nuevo iPhone? Esto anticipan JPMorgan, Bank of America y Citi para el Apple Event</p><small class="meta">Mercados · publicada el 8 sep. El plan del día decía «¿Cuánto valdrá el nuevo iPhone?»; salió «¿Cuánto costará el nuevo iPhone?» con el H2 «¿Cuánto costarán el iPhone 18 Pro, Pro Max y Ultra?».</small></td><td class="res"><span class="big">510</span><small>vistas en 7 días · 92 clics de búsqueda</small></td><td><span class="rel up">1,3 × la típica</span></td></tr>
-          <tr><td class="when">10 sep<small>#cendesk-general</small></td><td><span class="tipo k-r"><i aria-hidden="true"></i>Titular o nota</span><p class="que">Revisó la nota: respuesta directa bajo el H2 de inversión, precio objetivo más arriba y una tabla con BofA, Citi, Morgan Stanley y UBS.</p></td><td><p class="nota">Acción de Apple rebota en bolsa: ¿es hora de invertir? Este es el precio objetivo de Wall Street</p><small class="meta">Mercados · publicada el 10 sep. La nota publicada tiene el H2 «¿Es hora de invertir en acciones de Apple?» y una tabla.</small></td><td class="res"><span class="big">231</span><small>vistas en 7 días · 78 clics de búsqueda</small></td><td><span class="rel lo">0,6 × la típica</span></td></tr>
+          <tr><td class="when">8 ene 2025<small>#cendesk-general</small></td><td><span class="tipo k-e"><i aria-hidden="true"></i>Tema o ángulo</span><p class="que">Propuso el dólar en Bolivia, que tocaba máximos históricos.</p></td><td><p class="nota">Dólar en Bolivia en 2025: analistas ven presiones en el mercado paralelo y las reservas</p><small class="meta">Mercados · publicada el 10 ene 2025. Carlos lo sumó a su radar como tema SEO y lo publicó el 10 de enero, con titular propio.</small></td><td class="res"><span class="big">1.130</span><small>vistas en 7 días · la típica: 187</small></td><td><span class="rel hi">6,0 × la típica</span></td></tr>
+          <tr><td class="when">15 ene 2025<small>#the-morning-call</small></td><td><span class="tipo k-e"><i aria-hidden="true"></i>Tema o ángulo</span><p class="que">Recomendó el tema: cómo afectará la posesión de Trump al bitcoin y al mercado cripto.</p></td><td><p class="nota">Cómo afectará la posesión de Trump al bitcoin y al mercado cripto</p><small class="meta">Mercados · publicada el 16 ene 2025. Salió al día siguiente con ese mismo titular.</small></td><td class="res"><span class="big">2.670</span><small>vistas en 7 días · la típica: 232</small></td><td><span class="rel hi">11,5 × la típica</span></td></tr>
+          <tr><td class="when">20 ene 2025<small>#the-morning-call</small></td><td><span class="tipo k-e"><i aria-hidden="true"></i>Tema o ángulo</span><p class="que">Pidió una guía: qué es y cómo se invierte en las criptomonedas de Trump.</p></td><td><p class="nota">¿Qué es y cómo invertir en $TRUMP y $MELANIA, las criptomonedas de Donald Trump?</p><small class="meta">Cripto · publicada el 20 ene 2025. Salió ese mismo día, en la sección Cripto.</small></td><td class="res"><span class="big">3.113</span><small>vistas en 7 días · la típica: 394</small></td><td><span class="rel hi">7,9 × la típica</span></td></tr>
+          <tr><td class="when">26 feb<small>#cendesk-general</small></td><td><span class="tipo k-e"><i aria-hidden="true"></i>Tema o ángulo</span><p class="que">Vio que MercadoLibre traía tráfico dos días seguidos y pidió una entrega más.</p></td><td><p class="nota">La acción de MercadoLibre cayó por segundo día y Wall Street vigila el ciclo de inversión</p><small class="meta">Mercados · publicada el 26 feb. Salió esa misma tarde.</small></td><td class="res"><span class="big">1.326</span><small>vistas en 7 días · la típica: 1.581</small></td><td><span class="rel eq">0,8 × la típica</span></td></tr>
+          <tr><td class="when">5 mar<small>#cendesk-general</small></td><td><span class="tipo k-r"><i aria-hidden="true"></i>Titular o estructura</span><p class="que">Propuso dos titulares con el «mapa de riesgos» del conflicto en Irán y pidió nombrar las monedas por su código.</p></td><td><p class="nota">Dólar, bonos y acciones: el mapa de riesgos del conflicto en Irán para los mercados emergentes</p><small class="meta">Mercados · publicada el 5 mar. Carlos tomó la estructura y la ajustó al contenido: «mercados emergentes» en vez de América Latina y sin «según Goldman Sachs». Los códigos COP, BRL y MXN están en el cuerpo. Carlos pidió la revisión.</small></td><td class="res"><span class="big">989</span><small>vistas en 7 días · la típica: 1.117</small></td><td><span class="rel eq">0,9 × la típica</span></td></tr>
+          <tr><td class="when">5 mar<small>#cendesk-general</small></td><td><span class="tipo k-r"><i aria-hidden="true"></i>Titular o estructura</span><p class="que">Propuso el titular con la hora de apertura de Wall Street y de las bolsas de la región «este verano 2026».</p></td><td><p class="nota">EE.UU. cambia de horario: ¿a qué hora abre Wall Street y las bolsas de México, Colombia y la región este verano 2026?</p><small class="meta">Mercados · publicada el 5 mar. Salió con ese titular, palabra por palabra. Carlos pidió la revisión.</small></td><td class="res"><span class="big">2.051</span><small>vistas en 7 días · la típica: 1.117</small></td><td><span class="rel up">1,8 × la típica</span></td></tr>
+          <tr><td class="when">10 mar<small>#cendesk-general</small></td><td><span class="tipo k-r"><i aria-hidden="true"></i>Titular o estructura</span><p class="que">Pidió separar Perú en una nota propia y propuso tres titulares.</p></td><td><p class="nota">Precio del dólar en Perú: las razones detrás del histórico repunte del sol este martes</p><small class="meta">América latina · publicada el 10 mar. Salió como nota aparte con el tercer titular, sin el porcentaje, porque cambiaba durante el día.</small></td><td class="res"><span class="big">346</span><small>vistas en 7 días · la típica: 1.093</small></td><td><span class="rel lo">0,3 × la típica</span></td></tr>
+          <tr><td class="when">11 mar<small>#cendesk-general</small></td><td><span class="tipo k-e"><i aria-hidden="true"></i>Tema o ángulo</span><p class="que">Recomendó el explicador de las reservas estratégicas de petróleo cuando se anunció su liberación, y propuso titulares.</p></td><td><p class="nota">Reservas estratégicas de petróleo: qué son, cómo funcionan y qué países tienen más días de suministro</p><small class="meta">Mercados · publicada el 11 mar. Salió ese mismo día con un titular de Carlos: el efecto en el bolsillo no estaba en la nota. Carlos pidió la revisión.</small></td><td class="res"><span class="big">1.060</span><small>vistas en 7 días · la típica: 955</small></td><td><span class="rel eq">1,1 × la típica</span></td></tr>
+          <tr><td class="when">28 abr<small>#cendesk-general</small></td><td><span class="tipo k-r"><i aria-hidden="true"></i>Titular o estructura</span><p class="que">Propuso «Qué es la OPEP y cinco claves…» para no perder la búsqueda «qué es la OPEP».</p></td><td><p class="nota">Qué es la OPEP y cinco claves sobre la salida de Emiratos Árabes Unidos y su efecto en el petróleo</p><small class="meta">Mercados · publicada el 28 abr. Salió con ese titular, palabra por palabra. Carlos pidió la revisión.</small></td><td class="res"><span class="big">2.887</span><small>vistas en 7 días · la típica: 664</small></td><td><span class="rel hi">4,3 × la típica</span></td></tr>
+          <tr><td class="when">28 abr<small>#cendesk-general</small></td><td><span class="tipo k-a"><i aria-hidden="true"></i>Revisión sin cambios</span><p class="que">Revisó la nota del feriado del 1 de mayo y la dejó como estaba.</p></td><td><p class="nota">¿Wall Street abre este 1 de mayo? Así operan las bolsas en EE.UU. y América Latina en el Día del Trabajo</p><small class="meta">Mercados · publicada el 28 abr. Salió con el titular de Carlos. Carlos pidió la revisión.</small></td><td class="res"><span class="big">994</span><small>vistas en 7 días · la típica: 664</small></td><td><span class="rel up">1,5 × la típica</span></td></tr>
+          <tr><td class="when">6 jul<small>#cendesk-general</small></td><td><span class="tipo k-r"><i aria-hidden="true"></i>Titular o estructura</span><p class="que">Propuso llevar «caída del precio del dólar» y «julio 2026» al titular: es lo que más se busca.</p></td><td><p class="nota">¿Terminó la caída del precio del dólar? BBVA actualiza sus proyecciones para América Latina</p><small class="meta">Mercados · publicada el 6 jul. El titular quedó «¿Terminó la caída del precio del dólar?…» y el título para Google suma «en julio de 2026». Carlos pidió la revisión.</small></td><td class="res"><span class="big">1.020</span><small>vistas en 7 días · la típica: 691</small></td><td><span class="rel up">1,5 × la típica</span></td></tr>
+          <tr><td class="when">24 jul<small>#cendesk-general</small></td><td><span class="tipo k-e"><i aria-hidden="true"></i>Tema o ángulo</span><p class="que">Detectó búsquedas de «evolución de las acciones de Santander 2026» y propuso la nota.</p></td><td><p class="nota">Evolución de las acciones de Santander en 2026: resultados récord y qué esperan los analistas</p><small class="meta">Mercados · publicada el 24 jul. Salió ese mismo día, con esa frase al inicio del titular.</small></td><td class="res"><span class="big">246</span><small>vistas en 7 días · la típica: 778 · 289 clics de búsqueda (típica: 34)</small></td><td><span class="rel lo">0,3 × la típica</span></td></tr>
+          <tr><td class="when">3 sep<small>#cendesk-general</small></td><td><span class="tipo k-a"><i aria-hidden="true"></i>Revisión sin cambios</span><p class="que">Revisó la nota de la cartera de BofA en América Latina y la dejó como estaba.</p></td><td><p class="nota">Bank of America mueve su cartera en América Latina: las acciones y países que tiene en el radar</p><small class="meta">Mercados · publicada el 3 sep. Salió con el titular de Carlos. Carlos pidió la revisión.</small></td><td class="res"><span class="big">1.403</span><small>vistas en 7 días · la típica: 596 · 153 clics de búsqueda (típica: 76)</small></td><td><span class="rel up">2,4 × la típica</span></td></tr>
+          <tr><td class="when">8 sep<small>#the-morning-call</small></td><td><span class="tipo k-r"><i aria-hidden="true"></i>Titular o estructura</span><p class="que">Propuso las palabras clave del titular: iPhone 18 Pro, precio, Pro Max y «cuánto costará».</p></td><td><p class="nota">¿Cuánto costará el nuevo iPhone? Esto anticipan JPMorgan, Bank of America y Citi para el Apple Event</p><small class="meta">Mercados · publicada el 8 sep. El plan del día decía «¿Cuánto valdrá el nuevo iPhone?»; salió «¿Cuánto costará el nuevo iPhone?» con el H2 «¿Cuánto costarán el iPhone 18 Pro, Pro Max y Ultra?».</small></td><td class="res"><span class="big">510</span><small>vistas en 7 días · la típica: 409 · 92 clics de búsqueda (típica: 54)</small></td><td><span class="rel up">1,2 × la típica</span></td></tr>
+          <tr><td class="when">10 sep<small>#cendesk-general</small></td><td><span class="tipo k-e"><i aria-hidden="true"></i>Tema o ángulo</span><p class="que">Avisó cómo se movía la acción de Apple tras el lanzamiento y revisó la nota: respuesta directa bajo el H2, precio objetivo más arriba y una tabla.</p></td><td><p class="nota">Acción de Apple rebota en bolsa: ¿es hora de invertir? Este es el precio objetivo de Wall Street</p><small class="meta">Mercados · publicada el 10 sep. La nota publicada tiene el H2 «¿Es hora de invertir en acciones de Apple?» y una tabla. Carlos pidió la revisión.</small></td><td class="res"><span class="big">231</span><small>vistas en 7 días · la típica: 409 · 78 clics de búsqueda (típica: 53)</small></td><td><span class="rel lo">0,6 × la típica</span></td></tr>
         </tbody>
       </table>
     </div>
+  </section>
+
+  <section aria-labelledby="s-linea">
+    <div class="sec-head">
+      <p class="eyebrow">Línea de tiempo</p>
+      <h2 id="s-linea">La línea diaria desde el 20 de julio</h2>
+      <p>Sus notas promediaron 3.443 vistas diarias entre el 20 de julio y el 20 de septiembre. La semana más alta fue la del 27 de julio al 2 de agosto, con 6.252 vistas por día, por la nota de las monedas de julio. Las notas con SEO aportaron el 1,3% de esas vistas.</p>
+    </div>
+    <div class="legend">
+      <span><i class="k-prop"></i>Tema propuesto por SEO</span>
+      <span><i class="k-rev"></i>Otras notas con SEO</span>
+      <span><i class="k-rest"></i>Resto de sus notas</span>
+      <span><i class="k-ma"></i>Promedio de 7 días</span>
+    </div>
+    <div class="chart-card">
+      <div id="chart" role="img" aria-label="Vistas diarias de las notas de Carlos Rodríguez Salcedo, del 20 de julio al 20 de septiembre de 2026, con las notas en las que intervino SEO."></div>
+      <div class="tip" id="tip" hidden></div>
+    </div>
+    <ol class="events">
+      <li><span class="num">1</span><span><b>24 jul.</b> SEO propone la nota de la evolución de las acciones de Santander en 2026.</span></li>
+      <li><span class="num">2</span><span><b>3 sep.</b> SEO revisa la nota de la cartera de BofA en América Latina y la deja como está.</span></li>
+      <li><span class="num">3</span><span><b>8 sep.</b> SEO propone las palabras clave de la nota del precio del nuevo iPhone.</span></li>
+      <li><span class="num">4</span><span><b>10 sep.</b> SEO avisa del movimiento de la acción de Apple; Carlos escribe la nota y aplica las cuatro recomendaciones de SEO.</span></li>
+    </ol>
+    <div class="table-wrap">
+      <table class="t-sem" aria-label="Vistas diarias de las notas de Carlos por semana">
+        <thead><tr><th scope="col">Semana</th><th scope="col" class="num">Vistas por día</th><th scope="col" class="num">Notas publicadas</th><th scope="col" class="num">Mediana en 7 días</th><th scope="col" class="num">Parte con SEO</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">20 jul – 26 jul</th><td class="num">2.768</td><td class="num">22</td><td class="num">700</td><td class="num">1,1%</td></tr>
+          <tr class="top"><th scope="row">27 jul – 2 ago</th><td class="num">6.252</td><td class="num">26</td><td class="num">658</td><td class="num">0,3%</td></tr>
+          <tr><th scope="row">3 ago – 9 ago</th><td class="num">2.711</td><td class="num">22</td><td class="num">434</td><td class="num">0,2%</td></tr>
+          <tr><th scope="row">10 ago – 16 ago</th><td class="num">3.528</td><td class="num">29</td><td class="num">586</td><td class="num">0,2%</td></tr>
+          <tr><th scope="row">17 ago – 23 ago</th><td class="num">3.448</td><td class="num">21</td><td class="num">589</td><td class="num">0,2%</td></tr>
+          <tr><th scope="row">24 ago – 30 ago</th><td class="num">2.840</td><td class="num">27</td><td class="num">526</td><td class="num">0,2%</td></tr>
+          <tr><th scope="row">31 ago – 6 sep</th><td class="num">2.936</td><td class="num">25</td><td class="num">651</td><td class="num">6,7%</td></tr>
+          <tr><th scope="row">7 sep – 13 sep</th><td class="num">2.876</td><td class="num">29</td><td class="num">409</td><td class="num">4,3%</td></tr>
+          <tr><th scope="row">14 sep – 20 sep</th><td class="num">3.623</td><td class="num">26</td><td class="num">—</td><td class="num">0,3%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Vistas de GA4 de todas las notas que firma Carlos, incluidas las de meses anteriores que siguen recibiendo lectores. La mediana solo se da cuando todas las notas de la semana ya cumplieron 7 días. Esta tabla queda como línea base para medir lo que viene.</p>
   </section>
 
   <section aria-labelledby="s-lectura">
@@ -716,10 +796,11 @@
       <h2 id="s-lectura">Qué muestran y qué no</h2>
     </div>
     <ul class="caveats">
-      <li>Son dos notas: no alcanzan para separar el efecto de SEO del tema. Las dos eran de Apple en la semana del Apple Event, cuando Carlos publicó 6 notas de Apple en tres días.</li>
-      <li>Muestran coincidencia en el tiempo, no causa. La comparación justa es contra la nota típica de esos mismos días, no contra cero.</li>
-      <li>Los cambios que propuso SEO apuntan a búsqueda; el grueso del tráfico de Carlos llega por Discover, que depende sobre todo del titular y del tema. Por eso la guía de arriba se centra en los titulares.</li>
-      <li>Solo cuentan las intervenciones de SEO visibles en Slack: el DM con Carlos está vacío y las dos salieron de #the-morning-call y #cendesk-general. Las sugerencias de Angela o de Andrés no entran.</li>
+      <li>Muestran coincidencia, no causa. La comparación justa es contra sus otras notas de esos mismos días, no contra cero.</li>
+      <li>Las notas con SEO no son al azar: Carlos manda a revisar las que ya ve con potencial, y SEO propone temas con búsqueda detrás. Parte de la diferencia es del tema, no del titular.</li>
+      <li>Enero de 2025 es otro momento del sitio. Search Console ya no guarda datos de entonces, así que esas tres notas se miden solo con GA4.</li>
+      <li>Solo cuentan las intervenciones visibles en Slack, en notas de Carlos. No entran las sugerencias de editoras y editores ni las listas diarias de temas SEO para todo el Central Desk: de las de julio, solo un tema coincide con una nota suya del mismo día.</li>
+      <li>Las cifras de la nota típica salen de GA4 bajado por tramos: del 7 al 29 de enero de 2025, del 23 de febrero al 20 de marzo, del 25 de abril al 7 de mayo, del 3 al 15 de julio y el periodo de la guía. Cada tramo se cuadró contra el total del informe.</li>
     </ul>
   </section>
   </div>
@@ -1113,15 +1194,15 @@
 
   <footer>
     <p>Fuentes. Google Analytics 4 («All Sites GA4 Nuevo»), informe Páginas y pantallas con la fecha como dimensión secundaria, vistas del 20 de julio al 20 de septiembre de 2026 en rutas con /mercados/ (cuadradas contra el total del informe) y en las dos notas de Carlos fuera de esa ruta. Se cuentan solo las notas que firma Carlos Rodríguez Salcedo según el feed de su página de autor y los datos estructurados de cada nota. Cada nota se mide por sus vistas del día de publicación y los 6 siguientes (hora de Bogotá). Search Console: clics por página en Search y Discover del 20 de julio al 20 de septiembre, y consultas del 24 de agosto al 20 de septiembre, en páginas con /mercados/. Las cifras de notas anteriores al periodo (series de monedas, Nubank, horario y feriados) salen del mismo informe de GA4, filtrado por cada nota en sus primeros 7 días. Cada nota se asigna a un tema y a un formato según su titular vigente (en las notas del día, el titular puede cambiar durante la jornada).</p>
-    <p>Impacto de las propuestas: Slack de Bloomberg Línea (#the-morning-call, #cendesk-general y DM de SEO con Carlos), revisado hasta el 21 de septiembre de 2026; GA4 del 20 de julio al 20 de septiembre de 2026.</p>
+    <p>Impacto de SEO: Slack de Bloomberg Línea (#cendesk-general, #the-morning-call y DM de SEO con Carlos), desde el 8 de enero de 2025 y revisado hasta el 21 de septiembre de 2026. GA4 por tramos: del 7 al 29 de enero de 2025, del 23 de febrero al 20 de marzo, del 25 de abril al 7 de mayo y del 3 al 15 de julio de 2026, más el periodo de la guía; las dos notas con SEO fuera de /mercados/ se bajaron por su propia ruta. Clics de búsqueda de Search Console del periodo de la guía.</p>
     <p>Fechas del calendario: <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">Reserva Federal</a> · <a href="https://www.tse.jus.br/comunicacao/noticias/2026/Marco/eleicoes-2026-confira-as-principais-datas-do-calendario-eleitoral">TSE (elecciones de Brasil)</a> · <a href="https://www.timeanddate.com/time/change/usa">Cambio de horario en EE.UU.</a></p>
   </footer>
 </div>
 
 <script>
 (() => {
-  const DATA = [{"d":"2026-07-20","e":0,"ra":0,"o":1527},{"d":"2026-07-21","e":0,"ra":0,"o":2458},{"d":"2026-07-22","e":0,"ra":0,"o":4463},{"d":"2026-07-23","e":0,"ra":0,"o":3594},{"d":"2026-07-24","e":0,"ra":0,"o":3882},{"d":"2026-07-25","e":0,"ra":0,"o":1611},{"d":"2026-07-26","e":0,"ra":0,"o":1842},{"d":"2026-07-27","e":0,"ra":0,"o":4268},{"d":"2026-07-28","e":0,"ra":0,"o":3442},{"d":"2026-07-29","e":0,"ra":0,"o":5382},{"d":"2026-07-30","e":0,"ra":0,"o":6173},{"d":"2026-07-31","e":0,"ra":0,"o":11884},{"d":"2026-08-01","e":0,"ra":0,"o":10078},{"d":"2026-08-02","e":0,"ra":0,"o":2536},{"d":"2026-08-03","e":0,"ra":0,"o":3099},{"d":"2026-08-04","e":0,"ra":0,"o":3263},{"d":"2026-08-05","e":0,"ra":0,"o":4844},{"d":"2026-08-06","e":0,"ra":0,"o":4034},{"d":"2026-08-07","e":0,"ra":0,"o":2147},{"d":"2026-08-08","e":0,"ra":0,"o":750},{"d":"2026-08-09","e":0,"ra":0,"o":841},{"d":"2026-08-10","e":0,"ra":0,"o":2738},{"d":"2026-08-11","e":0,"ra":0,"o":3006},{"d":"2026-08-12","e":0,"ra":0,"o":4929},{"d":"2026-08-13","e":0,"ra":0,"o":5537},{"d":"2026-08-14","e":0,"ra":0,"o":5031},{"d":"2026-08-15","e":0,"ra":0,"o":2031},{"d":"2026-08-16","e":0,"ra":0,"o":1426},{"d":"2026-08-17","e":0,"ra":0,"o":1497},{"d":"2026-08-18","e":0,"ra":0,"o":5473},{"d":"2026-08-19","e":0,"ra":0,"o":6991},{"d":"2026-08-20","e":0,"ra":0,"o":4124},{"d":"2026-08-21","e":0,"ra":0,"o":2893},{"d":"2026-08-22","e":0,"ra":0,"o":1825},{"d":"2026-08-23","e":0,"ra":0,"o":1334},{"d":"2026-08-24","e":0,"ra":0,"o":2982},{"d":"2026-08-25","e":0,"ra":0,"o":2646},{"d":"2026-08-26","e":0,"ra":0,"o":2818},{"d":"2026-08-27","e":0,"ra":0,"o":3681},{"d":"2026-08-28","e":0,"ra":0,"o":4703},{"d":"2026-08-29","e":0,"ra":0,"o":1626},{"d":"2026-08-30","e":0,"ra":0,"o":1422},{"d":"2026-08-31","e":0,"ra":0,"o":3426},{"d":"2026-09-01","e":0,"ra":0,"o":4325},{"d":"2026-09-02","e":0,"ra":0,"o":2226},{"d":"2026-09-03","e":0,"ra":0,"o":3111},{"d":"2026-09-04","e":0,"ra":0,"o":4477},{"d":"2026-09-05","e":0,"ra":0,"o":1972},{"d":"2026-09-06","e":0,"ra":0,"o":1017},{"d":"2026-09-07","e":0,"ra":0,"o":3955},{"d":"2026-09-08","e":0,"ra":350,"o":2964},{"d":"2026-09-09","e":0,"ra":123,"o":3541},{"d":"2026-09-10","e":0,"ra":172,"o":4462},{"d":"2026-09-11","e":0,"ra":56,"o":2892},{"d":"2026-09-12","e":0,"ra":17,"o":971},{"d":"2026-09-13","e":0,"ra":8,"o":623},{"d":"2026-09-14","e":0,"ra":11,"o":3894},{"d":"2026-09-15","e":0,"ra":3,"o":3477},{"d":"2026-09-16","e":0,"ra":5,"o":8028},{"d":"2026-09-17","e":0,"ra":3,"o":4891},{"d":"2026-09-18","e":0,"ra":3,"o":3061},{"d":"2026-09-19","e":0,"ra":1,"o":1217},{"d":"2026-09-20","e":0,"ra":0,"o":766}];
-  const EVENTS = [{"d":"2026-09-08","n":1,"t":"SEO propone las palabras clave de la nota del precio del nuevo iPhone."},{"d":"2026-09-10","n":2,"t":"Carlos pide revisar su nota sobre la acción de Apple; SEO le deja cuatro recomendaciones."}];
+  const DATA = [{"d":"2026-07-20","e":0,"ra":8,"o":1519},{"d":"2026-07-21","e":3,"ra":7,"o":2448},{"d":"2026-07-22","e":1,"ra":7,"o":4455},{"d":"2026-07-23","e":2,"ra":5,"o":3587},{"d":"2026-07-24","e":95,"ra":4,"o":3783},{"d":"2026-07-25","e":48,"ra":3,"o":1560},{"d":"2026-07-26","e":32,"ra":2,"o":1808},{"d":"2026-07-27","e":61,"ra":3,"o":4204},{"d":"2026-07-28","e":7,"ra":6,"o":3429},{"d":"2026-07-29","e":11,"ra":10,"o":5361},{"d":"2026-07-30","e":3,"ra":7,"o":6163},{"d":"2026-07-31","e":5,"ra":6,"o":11873},{"d":"2026-08-01","e":5,"ra":1,"o":10072},{"d":"2026-08-02","e":2,"ra":3,"o":2531},{"d":"2026-08-03","e":3,"ra":5,"o":3091},{"d":"2026-08-04","e":4,"ra":5,"o":3254},{"d":"2026-08-05","e":3,"ra":5,"o":4836},{"d":"2026-08-06","e":6,"ra":6,"o":4022},{"d":"2026-08-07","e":5,"ra":1,"o":2141},{"d":"2026-08-08","e":1,"ra":1,"o":748},{"d":"2026-08-09","e":1,"ra":1,"o":839},{"d":"2026-08-10","e":3,"ra":3,"o":2732},{"d":"2026-08-11","e":2,"ra":3,"o":3001},{"d":"2026-08-12","e":5,"ra":2,"o":4922},{"d":"2026-08-13","e":12,"ra":2,"o":5523},{"d":"2026-08-14","e":6,"ra":4,"o":5021},{"d":"2026-08-15","e":1,"ra":2,"o":2028},{"d":"2026-08-16","e":3,"ra":9,"o":1414},{"d":"2026-08-17","e":2,"ra":10,"o":1485},{"d":"2026-08-18","e":2,"ra":7,"o":5464},{"d":"2026-08-19","e":8,"ra":0,"o":6983},{"d":"2026-08-20","e":7,"ra":4,"o":4113},{"d":"2026-08-21","e":5,"ra":2,"o":2886},{"d":"2026-08-22","e":0,"ra":2,"o":1823},{"d":"2026-08-23","e":1,"ra":1,"o":1332},{"d":"2026-08-24","e":1,"ra":1,"o":2980},{"d":"2026-08-25","e":0,"ra":5,"o":2641},{"d":"2026-08-26","e":3,"ra":1,"o":2814},{"d":"2026-08-27","e":4,"ra":10,"o":3667},{"d":"2026-08-28","e":3,"ra":3,"o":4697},{"d":"2026-08-29","e":0,"ra":2,"o":1624},{"d":"2026-08-30","e":3,"ra":3,"o":1416},{"d":"2026-08-31","e":5,"ra":2,"o":3419},{"d":"2026-09-01","e":2,"ra":6,"o":4317},{"d":"2026-09-02","e":6,"ra":3,"o":2217},{"d":"2026-09-03","e":4,"ra":818,"o":2289},{"d":"2026-09-04","e":2,"ra":364,"o":4111},{"d":"2026-09-05","e":1,"ra":131,"o":1840},{"d":"2026-09-06","e":1,"ra":39,"o":977},{"d":"2026-09-07","e":2,"ra":43,"o":3910},{"d":"2026-09-08","e":2,"ra":373,"o":2939},{"d":"2026-09-09","e":1,"ra":132,"o":3531},{"d":"2026-09-10","e":159,"ra":30,"o":4445},{"d":"2026-09-11","e":48,"ra":18,"o":2882},{"d":"2026-09-12","e":13,"ra":12,"o":963},{"d":"2026-09-13","e":6,"ra":27,"o":598},{"d":"2026-09-14","e":12,"ra":14,"o":3879},{"d":"2026-09-15","e":3,"ra":5,"o":3472},{"d":"2026-09-16","e":4,"ra":7,"o":8022},{"d":"2026-09-17","e":4,"ra":12,"o":4878},{"d":"2026-09-18","e":3,"ra":6,"o":3055},{"d":"2026-09-19","e":3,"ra":2,"o":1213},{"d":"2026-09-20","e":1,"ra":5,"o":760}];
+  const EVENTS = [{"d":"2026-07-24","n":1,"t":"SEO propone la nota de la evolución de las acciones de Santander en 2026."},{"d":"2026-09-03","n":2,"t":"SEO revisa la nota de la cartera de BofA en América Latina y la deja como está."},{"d":"2026-09-08","n":3,"t":"SEO propone las palabras clave de la nota del precio del nuevo iPhone."},{"d":"2026-09-10","n":4,"t":"SEO avisa del movimiento de la acción de Apple; Carlos escribe la nota y aplica las cuatro recomendaciones de SEO."}];
   const ANNO = {"d": "2026-07-31", "t": "Monedas de julio"};
   const MES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
   const box = document.getElementById('chart');
